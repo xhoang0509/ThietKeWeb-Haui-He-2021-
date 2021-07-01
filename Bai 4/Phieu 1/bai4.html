@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+    <style>
+        .app {
+            width: 960px;
+            background-color: #FACFCF;
+        }
+        .header {
+            height: 100px;
+        }
+        .menu {
+            height: 30px;
+            background-color: #420000;
+        }
+        .menu-list {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding-left: 0;
+        }
+        .menu-item {
+            display: inline-block;
+            line-height: 30px;
+            color: #fff;
+            padding: 0 10px;
+        }
+        .menu-item:hover,
+        .sidebar-item:hover {
+            background-color: red;
+            animation: fadeIn ease 0.6s;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .container {
+
+        }
+        .sidebar-left {
+            float: left;
+            width: 204px;
+            text-align: left;
+            background-color: #9D6F68;
+            height: 676px;
+            margin-top: 6px;
+        }
+        .sidebar-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar-item {
+            padding: 10px;
+            color: #fff;
+            margin: 32px 0px;
+        }
+        .content {
+            margin-left: 220px;
+        }
+        .footer {
+            text-align: center;
+            height: 100px;
+        }
+        .footer-list {
+            list-style: none;
+        }
+        .footer-item {
+            display: inline-block;
+            line-height: 100px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1><span style="color: #fff;">Slick</span>Red</h1>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-item">Home</li>
+                    <li class="menu-item">About</li>
+                    <li class="menu-item">Products</li>
+                    <li class="menu-item">Services</li>
+                    <li class="menu-item">Design</li>
+                    <li class="menu-item">Contact</li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="sidebar-left">
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">Links</li>
+                    <li class="sidebar-item">SEO</li>
+                    <li class="sidebar-item">PHP</li>
+                    <li class="sidebar-item">Ajax</li>
+                    <li class="sidebar-item">JQuery</li>
+                    <li class="sidebar-item">Javascript</li>
+                    <li class="sidebar-item">NodeJS</li>
+                    <li class="sidebar-item">Internet Maketing</li>
+                    <li class="sidebar-item">XHTML Templates</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h3>You may use this template in any manner you like. All I ask is that you leave
+                    the link back to my site at the bottom of the page.
+                </h3>
+                <h4>Template Notes</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <h4>More information</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+                <h4>Template Notes</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+        <footer class="footer">
+            <ul class="footer-list">
+                <li class="footer-item">florida web design |</li>
+                <li class="footer-item">web tutorial |</li>
+                <li class="footer-item">html codes |</li>
+                <li class="footer-item">fee templates</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <style>
+        .list_v1,
+        .list_v2 {
+            width: 600px;
+            height: 40px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            background-color: blue;
+            padding-left: 0;
+        }
+        .item_v1,
+        .item_v2 {
+            display: inline-block;
+            color: #fff; 
+            line-height: 40px;
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .item_v1:hover,
+        .item_v2:hover {
+            background-color: #ff0000;
+            cursor: pointer;
+        }
+        .item_v1:hover .list_v2 {
+            display: flex;
+        }
+        .list_v2 {
+            display: none;
+            width: 360px;
+            position: absolute;
+            left: -120px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list_v1">
+        <li class="item_v1">Chính trị-Xã hội</li>
+        <li class="item_v1">
+            Thế giới
+            <ul class="list_v2">
+                <li class="item_v2">Thư viện pháp luật</li>
+                <li class="item_v2">Sống khỏe</li>
+                <li class="item_v2">Pháp luật</li>
+            </ul>
+        </li>
+        <li class="item_v1">Nhịp sống trẻ</li>
+        <li class="item_v1">Giáo dục</li>
+        <li class="item_v1">Kinh tế</li>
+    </ul>    
+</body>
+</html>

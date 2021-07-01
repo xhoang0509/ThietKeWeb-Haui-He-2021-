@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <style>
+        input, button:hover {
+            cursor: pointer;
+        }
+        #submit {
+            background-color: #ff0000;
+        }
+        #reset {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="1" class="number" id="1">
+    <input type="button" value="2" class="number" id="2">
+    <input type="button" value="3" class="number">
+    <input type="button" value="4" class="number">
+    <input type="button" value="5" class="number">
+    <input type="button" value="+" onclick="phepCong()">
+    <br>
+    <input type="button" value="6" class="number">
+    <input type="button" value="7" class="number">
+    <input type="button" value="8" class="number">
+    <input type="button" value="9" class="number">
+    <input type="button" value="0" class="number">
+    <button onclick="sumbit()" id="submit">=</button>
+    <button onclick="reset()" id="reset">reset</button>
+    <br>
+    <!-- <span id="text1" type="text"></span> 
+    <span id="text2"></span> 
+    <span id="text3"></span>
+    <span id="text4"></span> -->
+    <input type="text" name="" id="text">
+</body>
+
+    <script>
+        var value1;
+        var value2;
+        var isValue1 = true;
+        var isValue2 = false;
+        var isCong = false;
+        var isSubmit = false;
+        const numberButtons = document.querySelectorAll('.number');
+        numberButtons.forEach(function(buntton) {
+            buntton.addEventListener('click', function() {
+                if (isValue1) {
+                    value1 = buntton.value;
+                    document.getElementById('text').value = document.getElementById('text').value + value1;
+                    isValue1 = false;
+                    isCong = true;
+                }
+                if(isValue2) {
+                    value2 = buntton.value;
+                    document.getElementById('text').value = document.getElementById('text').value + value2;
+                    isValue2 = false;
+                    isSubmit = true;
+                }
+            })
+        })
+        function phepCong() {
+            if (isCong) {
+                document.getElementById('text').value = document.getElementById('text').value + " + ";
+                isCong = false;
+                isValue2 = true;
+            }
+        }
+        function sumbit() {
+            if(isSubmit) {
+                var result = parseInt(value1) + parseInt(value2);
+                document.getElementById('text').value = document.getElementById('text').value + " = " + result;
+            }
+        }
+        function reset() {
+            value1 = 0;
+            value2 = 0;
+            isValue1 = true;
+            isValue2 = false;
+            isCong = false;
+            document.getElementById('text').value = "";
+        }
+        
+    </script>
+</html>

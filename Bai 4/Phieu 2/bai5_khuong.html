@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phiếu 2 - Bài 5</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .menu {
+                display: block;
+                width: 200px;
+                list-style: none;
+                padding-left: 0;
+            }
+            .menu li {
+                list-style: none;
+                background-color: blue;
+                padding: 10px ;
+                margin: 4px 0;
+                position: relative;
+                height: 40px;
+            }
+            .menu li:hover {
+                background-color: red;
+                animation: fadeIn ease 0.4s;
+            }
+            .menu li:hover .menu-2 {
+                display: block;
+                animation: fadeIn ease 1s;
+            }
+            .menu li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            .menu-2 {
+                display: none;
+                padding-left: 0;
+                width: 200px;
+                position: absolute;
+                top: -48px;
+                left: calc(100% + 10px);
+            }
+            .menu-2::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: -15px;
+                height: 150px;
+                width: 20px;
+            }
+            .menu-2 li {
+                padding: 10px;
+                height: 40px;
+            }
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <ul class="menu clearfix">
+                <li><a href="#">Chính trị-Xã hội</a></li>
+                <li >
+                    <a href="#">Thế giới</a>
+                    <ul class="menu-2">
+                        <li><a href="#">Thư viện pháp luật</a></li>
+                        <li><a href="#">Sồng khoẻ</a></li>
+                        <li><a href="#">Pháp luật</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Nhịp sống trẻ</a></li>
+                <li><a href="#">Giáo dục</a></li>
+                <li><a href="#">Kinh tế</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

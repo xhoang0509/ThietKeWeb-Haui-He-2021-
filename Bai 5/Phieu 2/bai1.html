@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+</head>
+<body>
+    <div class="app">
+        <h4>Sử dụng HTML và Javascript để thực hiện giải bài toán phương trình bậc 2 </h4>
+        <span>ax<sup>2</sup>+bx+c=0 với a=4, b=6, c=2 </span>
+        <p>Kết quả: <span id="result"></span></p>
+    </div>
+</body>
+    <script>
+        const a = 4;
+        const b = 6;
+        const c = 2;
+        let delta = b*b -4*a*c;
+        if (delta < 0) {
+            document.getElementById('result').innerHTML = "Phương trình vô nghiệm";
+        } else if (delta == 0) {
+            let x = -b / 2*a;
+            document.getElementById('result').innerHTML = `Phương trình có nghiệp kép x1 = x2 = ${x}`;
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / 2*a;
+            let x2 = (-b - Math.sqrt(delta)) / 2*a;
+            document.getElementById('result').innerHTML = `x1 = ${x1}, x2 = ${x2}`;
+        }       
+    </script>
+</html>

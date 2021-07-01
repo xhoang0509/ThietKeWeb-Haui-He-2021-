@@ -1,0 +1,153 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header */
+.header {
+    width: 1320px;
+    height: 100px;
+}
+.header-img {
+    width: 1320px;
+    height: 100px;
+}
+
+/* Nav */
+.nav {
+    margin-top: 80px;
+    float: left;
+}
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    display: block;
+
+}
+.nav-item {
+    width: 290px;
+    height: 60px;
+    background-color: #8AD385;
+    margin-top: 4px;
+    position: relative;
+    padding-left: 20px;
+}
+.nav-item:hover {
+    background-color: #CDE2CD;
+}
+.nav-item:hover .sub-list {
+    display: block;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+}
+.sub-list {
+    display: none;
+    position: absolute;
+    top: -4px;
+    left: 100%;
+    padding-left: 0;
+    list-style: none;
+    margin-left: 2px;
+}
+.sub-list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -12px;
+    height: 200px;
+    width: 20px;
+}
+.sub-item {
+    width: 290px;
+    height: 60px;
+    background-color: #8AD385;
+    margin-top: 4px;
+    padding-left: 20px;
+}
+.sub-item:hover {
+    background-color: #CDE2CD ;
+}
+.sub-link {
+    text-decoration: none;
+    color: #000;
+    line-height: 60px;
+}
+
+/* Section */
+.section {
+    margin-top: 20px;
+    margin-left: 320px;
+    display: flex;
+    flex-direction: row;
+    color: #004080;
+}
+/* Section 1 */
+.section-content-1 {
+    display: flex;
+    flex-direction: row;
+}
+.section-content {
+
+}
+
+.content-heading {
+
+}
+
+.content-list {
+
+}
+
+.content-item {
+    margin-top: 10px;
+}
+
+.content-link {
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+}
+.section-img {
+
+}
+.section-img-1 {
+    margin-bottom: 200px;
+}
+
+.section-img-2 {
+
+}
+
+/* Section 2 */
+.section-content-2 {
+    display: flex;
+    flex-direction: column;
+}
+.content-1 {
+    margin-bottom: 250px;
+}
+.title-book {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-style: ;
+}
+.content-2 {
+
+}
+/* Footer */
+.footer {
+    display: block;
+    height: 50px;
+    background-color: #000;
+    text-align: center;
+}
+.footer-content {
+    color: #004080;
+    line-height: 40px;
+}
+
