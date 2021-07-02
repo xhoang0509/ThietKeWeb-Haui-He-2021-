@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De 03</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 0;
+            width: 100%;
+            height: 100px;
+        }
+        header img {
+            width: 100%;
+            height: 100%;
+        }
+        .main {
+            margin-top: 10px;
+            display: flex;
+            height: 700px;
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            width: 100%;
+            background-color: #00A69B;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+        nav ul li {
+            width: 100%;
+            height: 40px;            
+            border-right:1px solid #000;
+        }
+        nav ul li a {
+            /* height: 100%;
+            text-decoration: none;
+            color: #ff0000;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            text-align: center; */
+            text-decoration: none;
+            color: #ff0000;
+            display: block;
+            line-height: 40px;
+            padding-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav ul li a:hover {
+            background-color: #5F5C5C;
+        }
+        .cha {
+            position: relative;
+        }
+        .con {
+            position: absolute;
+            top: 100%;
+            display: none;
+            list-style-position: inside;
+        }
+        .con li {
+            border-right: 0;
+            list-style-type: initial;
+            display: inline-block;
+        }
+        .con li a {
+            text-align: left;
+            border-bottom: 1px solid #000;
+        }
+        .cha:hover .con {
+            display: block;
+        }
+        
+        section {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            color: #004080;
+        }
+        .tusach {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+        }
+        .tusach ul{
+            list-style-position: inside;
+        }
+        .tusach ul li {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+        .content {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        .dong {
+            width: 100%;    
+            height: 200px;
+            display: flex;
+        }
+        .anh img {
+            width: 250px;
+            height: 200px;
+        }
+        .chu {
+            padding-left: 10px;
+        }
+        footer {
+            background-color: #000;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./header.png" alt="anh tieu de">
+    </header>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Hoa sự kiến</a></li>
+                <li class="cha"><a href="#">
+                    Hoa cảnh
+                    <ul class="con">
+                        <li><a href="#">Ho sống đời</a></li>
+                        <li><a href="#">Hoa trạng nguyên</a></li>
+                        <li><a href="#">Hoa dạ nguyên thảo</a></li>
+                        <li><a href="#">Hoa cúc chậu</a></li>
+                        <li><a href="#">Hoa dừa cạn</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">Cây cảnh</a></li>
+                <li><a href="#">Đồ trang trí</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Đăng kí</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="tusach">
+                <h2>Tủ sách</h2>
+                <ul>
+                    <li>Cây hoa cảnh tết</li>
+                    <li>Mai Vàng</li>
+                    <li>Hoa cảnh sự kiện</li>
+                    <li>Đồ trang trí</li>
+                    <li>Tranh cây treo tường</li>
+                    <li>Chậu cảnh</li>
+                    <li>Tường cây</li>
+                    <li>Cây nội thất</li>
+                    <li>Hoa tươi</li>
+                    <li>Non bộ</li>
+                    <li>Cây tài lộc -  May mắn</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="dong">
+                    <div class="anh">
+                        <img src="./anh1.png" alt="anh tuyet mai">
+                    </div>
+                    <div class="chu">
+                        <h4>Bạch tuyết mai bonsai</h4>
+                        <p>
+                            Tên khoa học: Serissa foetida, Serissa japonica Thumb Họ thực vật: 
+                            Rubiaceae (họ cà phê) Cao trung bình: 50m - 1m (tính luôn cả chậu) Phân bố củ yếu ở Đà Lạt.
+                        </p>
+                        <p>
+                            Công dụng: Bạch tuyết mai bon sai thường dùng trang trí phòng khách, bàn làm việc, hay nội thất nhà ở văn phòng
+                            đều được, tạo cho không gian nhà ở nên đặc biệt hơn với cây có hình dạng bonsai.
+                        </p>
+                    </div>
+                </div>
+                <div class="dong">
+                    <div class="anh">
+                        <img src="./anh2.png" alt="anh kim ngan">
+                    </div>
+                    <div class="chu">
+                        <h4>Cây Kim Ngân</h4>
+                        <p>
+                            Tên thường gọi: Cây Kim Ngân Tên khoa học: Pachira aquatica Họ: 
+                            Bombacacear (Gòn/Gạo) Cây cao: 1,7 - 2,2m Công dụng: Cây kim ngân được xem là rất 
+                            tốt về phong thủy, mang đến cho gia chủ sự may mắn và thịnh vượng. nên được nhiều người
+                            sử dụng chưng bày trong văn phòng làm việc công ty, tiền sành nhà hàng, khách sạn...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>Bản quyền CNTT_HAUI.com</footer>
+</body>
+</html>
