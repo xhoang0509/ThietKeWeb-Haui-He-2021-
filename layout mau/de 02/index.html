@@ -4,56 +4,195 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bai 2</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>De 02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+        }
+        header img {
+            width: 100%;
+            height: 100%;
+        }
+        .main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 700px;
+            margin-top: 50px;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        nav ul {
+            width: 100%;
+            background-color: #00A69B;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 0;
+        }
+        nav ul li {
+            width: 100%;
+            height: 40px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ff0000;
+            display: block;
+            line-height: 40px;
+            padding-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav ul li a:hover {
+            background-color: #5F5C5C;
+        }
+        .cha {
+            position: relative;
+        }
+        .con {
+            position: absolute;
+            width: 100%;
+            background-color: #00A69B;
+            top: 100%;
+            display: none;
+            z-index: 100;
+        }
+        .con li a {
+            text-align: left;
+        }
+        .cha:hover .con {
+            display: block;
+        }
+        section {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            color: #004080;
+            align-items: center;
+        }
+        .sieuthi {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            justify-content: center;
+        }
+        .sieuthi ul {
+            list-style-position: inside;
+        }
+        .sieuthi ul li {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+        }
+        .thongtin {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+        .dong {
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        .anh {
+            width: 250px;
+            height: 200px;
+        }
+        .chu {
+            padding-left: 40px;
+        }
+        footer {
+            background-color: #000;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #004080;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <img src="./header.png" alt="anh tieu de" class="header-img">
+    <header>
+        <img src="./header.png" alt="anh tieu de">
     </header>
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="item-link">Trang chủ</a></li>
-            <li class="nav-item"><a href="#" class="item-link">Đồ gia dụng</a></li>
-            <li class="nav-item"><a href="#" class="item-link">
-                Điện lạnh
-                <ul class="sub-list">
-                    <li class="sub-item"><a href="#">Sản phẩm điện lạnh</a></li>
-                    <li class="sub-item"><a href="#">Tủ lạnh theo hãng</a></li>
-                    <li class="sub-item"><a href="#">Máy giặt theo hãng</a></li>
-                    <li class="sub-item"><a href="#">Điều hõa theo hãng</a></li>
-                </ul>
-            </a></li>
-            <li class="nav-item"><a href="#" class="item-link">Điện tủ - Âm thanh</a></li>
-            <li class="nav-item"><a href="#" class="item-link">Điện thoại</a></li>
-            <li class="nav-item"><a href="#" class="item-link">Laptop</a></li>
-            <li class="nav-item"><a href="#" class="item-link"> Máy tính - Linh kiện</a></li>
-            <li class="nav-item"><a href="#" class="item-link">Hóa đơn mua hàng</a></li>
-        </ul>
-    </nav>
-    <section class="section">
-        <div class="content-1">
-            <div class="section-content">
-                <h1>Siêu thị tại Hà Nội</h1>
-                <ul class="content-list">
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Cầu Giấy</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Long Biên</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Hai Bà Trung</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Hà Đông</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Đống Đa</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Hoàng Mai</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Nam Từ Liêm</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - AEON Mall</a></li>
-                    <li class="content-item"><a href="#" class="item-link">Trần Anh - Đông Anh</a></li>
+    <div class="main">
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Đồ gia dụng</a></li>
+                <li class="cha"><a href="#">
+                    Điện lạnh
+                    <ul class="con">
+                        <li><a href="#">Sản phẩm điện lạnh</a></li>
+                        <li><a href="#">Tủ lạnh theo hãng</a></li>
+                        <li><a href="#">Máy giặt theo hãng</a></li>
+                        <li><a href="#">Điêu hòa theo hãng</a></li>
+                    </ul>
+                </a></li>
+                   
+                <li><a href="#">Điện tử - Âm thanh</a></li>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Máy tính - Linh kiện</a></li>
+                <li><a href="#">Hóa đơn mua hàng</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="sieuthi">
+                <h2>Siêu thị tại HÀ NỘI</h2>
+                <ul>
+                    <li>Trầm Anh - Cầu Giấy</li>
+                    <li>Trầm Anh - Long Biên</li>
+                    <li>Trầm Anh - Hai Bà Trưng</li>
+                    <li>Trầm Anh - Hà Đông</li>
+                    <li>TRầm Anh - Hoàng Mai</li>
+                    <li>Trầm Anh - Đống Đa</li>
+                    <li>Trầm Anh - Hoàng Mai</li>
+                    <li>Trầm Anh - Nam Từ Liêm</li>
+                    <li>Trầm Anh - Đông Anh</li>
                 </ul>
             </div>
-        </div>
-        <div class="content-2">
-
-        </div>
-    </section>
-    <footer class="footer">
-
+            <div class="thongtin">
+                <div class="dong">
+                    <div class="anh">
+                        <img src="./anh1.jpg" alt="anh den hong ngoai">
+                    </div>
+                    <div class="chu">
+                        <h4>Đèn sưởi phòng tắm Sunhouse SHD3803</h4>
+                        <p>
+                            Thiết kết nhỏ gọn, đẹp mắt Đèn sưởi phòng tắm Sunhouse SHD2803 sử dụng bóng đèn có màu vàng đẹp mắt, có thể là vật trang trí cho không gian nhà bạn. Thiết kế nhỏ gọi không làm tốn đi không gian trong phòng tắm nhà bạn. Bóng đén halogen hồng ngoại làm bằng thủy tin rất bền. không chói mắt, chịu được nước lạnh đên 4 độ C khi đang hoạt động. Bóng đèn được mạ vàng không bị lóa, phát ra tia hồng ngoại tốt cho da, tốt cho sức khỏe của bạn
+                        </p>
+                    </div>
+                </div>
+                <div class="dong">
+                    <div class="anh">
+                        <img src="./anh2.jpg" alt="anh quat suoi">
+                    </div>
+                    <div class="chu">
+                        <h4>Quạt sưởi hồng ngoại Sunhouse, SHD7013</h4>
+                        <p>
+                            Thiết kết nhỏ gọn Quạt sưởi hồng ngoại Sunhouse, SHD7013 dụng bóng đèn có màu vàng đẹp mắt, có thể là vật trang trí cho không gian nhà bạn. Thiết kế nhỏ gọi không làm tốn đi không gian trong phòng tắm nhà bạn. Bóng đén halogen hồng ngoại làm bằng thủy tin rất bền. không chói mắt, chịu được nước lạnh đên 4 độ C khi đang hoạt động. Bóng đèn được mạ vàng không bị lóa, phát ra tia hồng ngoại tốt cho da, tốt cho sức khỏe của bạn
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        Bản quyền CNTT_HAUI.com
     </footer>
 </body>
 </html>
