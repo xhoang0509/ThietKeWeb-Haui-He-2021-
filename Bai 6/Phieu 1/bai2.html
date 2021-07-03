@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <style>
+        .calculator {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <button value="1" onclick="ghep(this.value)">1</button>
+        <button value="2" onclick="ghep(this.value)">2</button>
+        <button value="3" onclick="ghep(this.value)">3</button>
+        <button value="4" onclick="ghep(this.value)">4</button>
+        <button value="5" onclick="ghep(this.value)">5</button>
+        <button value="+" onclick="ghep(this.value)">+</button>
+        <br>
+        <button value="6" onclick="ghep(this.value)">6</button>
+        <button value="7" onclick="ghep(this.value)">7</button>
+        <button value="8" onclick="ghep(this.value)">8</button>
+        <button value="9" onclick="ghep(this.value)">9</button>
+        <button value="0" onclick="ghep(this.value)">0</button>
+        <button value="=" onclick="tinhtoan()">=</button>
+        <br>
+        <button value="" onclick="reset()">reset</button>
+
+        <br>
+        <span id="params"></span>
+        <span id=kq></span>
+    </div>
+</body>
+
+<script>
+    var bieuthuc = ''
+    function ghep(s) {
+        bieuthuc += s;
+        document.getElementById("params").innerText = bieuthuc;
+
+    }
+    function tinhtoan() {
+        var vl = eval(bieuthuc)
+        //hiển thị lên trang web
+        document.getElementById("kq").innerText = " = " + vl;
+        //Hiển thị thông báo lên cửa sổ
+        // alert("Gia tri tinh duoc la: "+ vl);
+    }
+    function reset() {
+        bieuthuc = ''
+        vl = 0
+        document.getElementById("params").innerText = "";
+        document.getElementById("kq").innerText = "";
+
+    }
+</script>
+
+
+
+</html>
