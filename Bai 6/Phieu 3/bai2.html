@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+    <style>
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h4>JavaScirpt có thể kiểm soát form</h4>
+        <p>Hãy nhập số vào hộp text (từ 1 đến 10)</p>
+        <input type="text" name="input" id="input"> 
+        <input type="button" value="Submit" onclick="process()">
+        
+        <input type="reset" value="xóa" onclick="reset()">
+        <br>
+        <p id="output"></p>
+    </form>
+</body>
+
+<script>
+    function process() {
+        var input = document.getElementById('input').value;
+        if (isNaN(input) || input < 1 || input > 10) {
+            document.getElementById('output').textContent = "Dữ liệu không đúng theo yêu cầu";
+        } else {
+            document.getElementById('output').textContent = 'Dữ liệu hợp hệ'
+        }
+    }
+    function reset() {
+        document.getElementById('output').textContent  = "";
+    }
+</script>
+
+</html>

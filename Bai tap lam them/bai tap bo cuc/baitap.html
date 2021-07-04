@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo bo cuc trang web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            height: 100px;
+            width: 100%;
+            background-color: #6699FF;
+        }
+        .main {
+            width: 100%;
+            display: flex;
+            margin-top: 20px;
+            flex-direction: column;
+        }
+        nav {
+            width: 100%;
+            height: 40px;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            background-color: #ccc;
+
+        }
+        nav ul li {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            position: relative;
+            border-right: 1px solid #fff;
+        }
+        nav ul li:hover .sub-list {
+            display: block;
+        }
+        nav ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 40px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #ff0000;
+            color: #fff;
+        }
+        .sub-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .sub-list li {
+            border: none;
+        }
+        .sub-list li a {
+            text-align: left;
+            padding-left: 20px;
+            text-transform: initial;
+        }
+        section {
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+        }
+        .left {
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .left .item {
+            text-align: center;
+        }
+        .left img {
+            width: 100px; 
+            padding-left: 10px;           
+        }
+        .right {
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .right img {
+            width: 200px;
+        }
+        footer {
+            height: 50px;
+            background-color: #000;
+            text-align: center;
+            color: #fff;
+            line-height: 50px;
+        }
+     </style>
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">điện thoại</a></li>
+                <li><a href="#">tablet</a></li>
+                <li><a href="#">phụ kiện</a></li>
+                <li><a href="#">đồng hộ</a></li>
+                <li><a href="#">
+                    âm thanh
+                    <ul class="sub-list">
+                        <li><a href="#">Loa</a></li>
+                        <li><a href="#">Loa vi tính</a></li>
+                        <li><a href="#">Loa bluetooth</a></li>
+                        <li><a href="#">Loa kéo</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">laptop</a></li>
+                <li><a href="#">sim thẻ</a></li>
+                <li><a href="#">hàng cũ</a></li>
+                <li><a href="#">trả góp</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="left">
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+                <div class="left-item">
+                    <img src="./hi.jpg" alt="anh dien thoai">
+                    <p>Galaxy note 10</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-item">
+                    <img src="./hi.jpg" alt="anh cong nhan">
+                    <p>Tai nghe over</p>
+                    <p>1,990,000 đ</p>
+                    <p><del>3,000,000 đ</del></p>
+                </div>
+                <div class="right-item">
+                    <img src="./hi.jpg" alt="anh cong nhan">
+                    <p>Tai nghe over</p>
+                    <p>1,990,000 đ</p>
+                    <p><del>3,000,000 đ</del></p>
+                </div>
+                <div class="right-item">
+                    <img src="./hi.jpg" alt="anh cong nhan">
+                    <p>Tai nghe over</p>
+                    <p>1,990,000 đ</p>
+                    <p><del>3,000,000 đ</del></p>
+                </div>
+                <div class="right-item">
+                    <img src="./hi.jpg" alt="anh cong nhan">
+                    <p>Tai nghe over</p>
+                    <p>1,990,000 đ</p>
+                    <p><del>3,000,000 đ</del></p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>Copyright 2021 | CNTT HAUI</footer>
+</body>
+</html>

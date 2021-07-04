@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+    <style>
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+   <form action="">
+        <h3>Phương trình bậc nhất hai ẩn</h3>
+        a = <input type="text" name="a1" id="a1">, b = <input type="text" name="b1" id="b1">, c = <input type="text" name="c1" id="c1">
+        <br>
+        a' = <input type="text" name="a2" id="a2">, b' = <input type="text" name="b2" id="b2">, c = <input type="text" name="c2" id="c2">
+        <br>
+        <input type="button" value="Tính" onclick="tinh()">
+        <input type="reset" value="Xóa">
+        <br>
+        <br>
+        <input type="text" id="result" style="width: 350px; height: 30px" >
+   </form>
+
+
+</body>
+
+<script>
+    const $ = document.querySelector.bind(document)
+    const $$ = document.querySelectorAll.bind(document)
+    function tinh() {
+        var a1 = $('#a1').value
+        var b1 = $('#b1').value
+        var c1 = $('#c1').value
+        var a2 = $('#a2').value
+        var b2 = $('#b2').value
+        var c2 = $('#c2').value
+        var result = $('#result')
+
+
+        var D = a1*b2 - b1*a2
+        var Dx = c1*b2 - b1*c2
+        var Dy = a1*c2 - a2*c1
+        if (D == 0) {
+            if (Dx == 0 && Dy == 0) {
+                result.value = 'Hệ vô số nghiệm'
+            } else {
+                result.value = "Hệ vô nghiệm"
+            }
+        } else {
+            var x = Math.round(Dx / D, 2);
+            var y = Math.round(Dy / D, 2);
+            result.value = 'Hệ có nghiệm du nhất: x = ' + x + ', y =' + y; 
+        }
+    }
+</script>
+
+
+
+</html>

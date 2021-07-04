@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <input type="button" value="1" onclick="display(this.value)">
+    <input type="button" value="2" onclick="display(this.value)">
+    <input type="button" value="3" onclick="display(this.value)">
+    <input type="button" value="4" onclick="display(this.value)">
+    <input type="button" value="5" onclick="display(this.value)">
+    <input type="button" value="-" onclick="display(this.value)">
+    <br>
+    <input type="button" value="6" onclick="display(this.value)">
+    <input type="button" value="7" onclick="display(this.value)">
+    <input type="button" value="8" onclick="display(this.value)">
+    <input type="button" value="9" onclick="display(this.value)">
+    <input type="button" value="0" onclick="display(this.value)">
+    <input type="button" value="=" onclick="tinh()">
+    <button value="" onclick="reset()">reset</button>
+    <br>
+    <input type="text" name="" id="result">
+
+</body>
+
+<script>
+    var bieuthuc = ""
+    function display(s) {
+        bieuthuc += s
+        document.getElementById("result").value = bieuthuc;
+
+    }
+    function tinh() {
+        var ket_qua = eval(bieuthuc)
+        //hiển thị lên trang web
+        document.getElementById('result').value = bieuthuc + " = " + ket_qua;
+    }
+    function reset() {
+        bieuthuc = ''
+        ket_qua = 0
+        document.getElementById("result").value = "";
+
+    }
+</script>
+
+
+</html>

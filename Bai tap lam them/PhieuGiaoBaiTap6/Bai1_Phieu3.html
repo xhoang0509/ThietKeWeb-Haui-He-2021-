@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ip {
+            width: 30px;
+        }
+    </style>
+</head>
+
+<script>
+  function  Tinh() {
+        var a1 = parseFloat(document.getElementById("a1").value);
+        var a2 = parseFloat(document.getElementById("a2").value);
+        var b1 = parseFloat(document.getElementById("b1").value);
+        var b2 = parseFloat(document.getElementById("b2").value);
+        var c1 = parseFloat(document.getElementById("c1").value);
+        var c2 = parseFloat(document.getElementById("c2").value);
+        var D = a1 * b2 - b1 * a2;
+        var Dx = c1 * b2 - c2 * b1;
+        var Dy = a1 * c2 - a2 * c1;
+        if (D == 0) {
+            if (Dx == 0 && Dy == 0) alert("Hệ phương trình có vô số nghiệm");
+            else alert("Hệ phương trình vô nghiệm");
+        } else alert(`Hệ có nghiệm duy nhất là x = ${Dx/D} và y = ${Dy/D}`);
+    }
+</script>
+
+<body>
+    <form action="">
+        <p>a = <input type="text" id="a1" class="ip"></p>
+        <p>a' = <input type="text" id="a2" class="ip"></p>
+        <p>b = <input type="text" id="b1" class="ip"></p>
+        <p>b' = <input type="text" id="b2" class="ip"></p>
+        <p>c = <input type="text" id="c1" class="ip"></p>
+        <p>c' = <input type="text" id="c2" class="ip"></p>
+        <input type="button" value="Tính" onclick="Tinh()">
+        <input type="reset" value="Xóa">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bt thêm layout</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .all{
+            width: 100%;
+
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .menu{
+            position: relative; 
+            justify-content: space-around;
+            height: 50px;
+            display: flex;
+            width: 100%;
+            background-color: gray;
+        }
+        .menu > li{
+            text-align: center;
+            width: 200px;
+            list-style-type: none;
+        }
+
+        .menu > li > a{
+            color: #000;
+            border-right: 0.5px solid #fff;
+            line-height: 50px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu > li:hover > a{
+            background-color: red;
+            color: #fff;
+        }
+        .submenu{
+            display: none;
+            position: absolute;
+            width: 200px;
+        }
+
+        .submenu li{
+            width: 200px;
+            list-style-type: none;
+        }
+
+        .submenu li a{
+            text-indent: 8px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            color: #000;
+            line-height: 50px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .menu > li:hover > .submenu{
+            display: block;
+        }
+
+        section{
+            display: flex;
+            width: 100%;
+            height: 500px;
+        }
+
+        .left{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .anh, .anh p{
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .right{
+            margin-left: 20px;
+           display: flex;
+           align-items: center;
+            width: 70%;
+            height: 100%;
+            display: flex;
+        }
+        .item{
+            margin: 0px 10px;
+        }
+       
+       footer{
+           width: 100%;
+           height: 50px;
+           background-color: violet;
+       }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <header>
+
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">ĐIỆN THOẠI</a></li>
+                <li><a href="#">TABLET</a> </li>
+                <li><a href="#">ĐỒNG HỒ</a>
+                <li><a href="#">ÂM THANH</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sản phẩm điện lạnh</a></li>
+                        <li><a href="#">Tủ lạnh theo hãng</a></li>
+                        <li><a href="#">Máy giặt theo hãng</a></li>
+                        <li><a href="#">Điều hòa theo hãng</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">LAPTOP</a></li>
+                <li><a href="#">SIM THẺ</a></li>
+                <li><a href="#">HÀNG CŨ</a></li>
+                <li><a href="#">TRẢ GÓP</a></li>
+                
+            </ul>
+        </nav>
+        <section>
+            <div class="left">
+                <div class="dong1">
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+                </div>
+                <div class="dong1">
+                    
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+                   
+                    
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+                  
+                </div>
+                <div class="dong1">
+                    
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+                   
+                   
+                        <div class="anh">
+                            <img src="./hi.jpg" alt="" width="100px" height="100px">
+                        </div>
+                        <div class="title">Galaxy note 10</div>
+                  
+                </div>
+                
+                
+            </div>
+            <div class="right">
+                    <div class="item">
+                        <img src="./hi.jpg" alt="" width="200px" height="200px">
+                        <p>Tai nghe over</p><br>
+                        <p>1,990,000 đ</p><br>
+                        <p><strike>3,000,000 đ</strike></p>
+                    </div>
+                    <div class="item">
+                        <img src="./hi.jpg" alt="" width="200px" height="200px">
+                        <p>Tai nghe over</p><br>
+                        <p>1,990,000 đ</p><br>
+                        <p><strike>3,000,000 đ</strike></p>
+                    </div>
+                    <div class="item">
+                        <img src="./hi.jpg" alt="" width="200px" height="200px">
+                        <p>Tai nghe over</p><br>
+                        <p>1,990,000 đ</p><br>
+                        <p><strike>3,000,000 đ</strike></p>
+                    </div>
+                    <div class="item">
+                        <img src="./hi.jpg" alt="" width="200px" height="200px">
+                        <p>Tai nghe over</p><br>
+                        <p>1,990,000 đ</p><br>
+                        <p><strike>3,000,000 đ</strike></p>
+                    </div>
+                
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 30px;
+        }
+    </style>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        function Tinh() {
+            var a = parseFloat($("#a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            var delta = (b * b) - (4 * a * c);
+            if (delta < 0) alert("Phương trình vô nghiệm, mời nhâp lại a, b và c");
+            else if (delta == 0) alert(`Phương trình có nghiệm kép là x1 = x2 = ${(-b / (2 * a))}`);
+            else alert("Phương trình có 2 nghiệp phân biệt là x1 ="+ (-b + Math.sqrt(delta)) / (2 * a)+" và x2 = "+(-b - Math.sqrt(delta)) / (2 * a));
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="a">x<sup>2</sup> + <input type="text" id="b">x + <input type="text" id="c"> = 0
+        <button onclick="Tinh()" type="button">Tính</button> <button type="reset">Xóa</button>
+    </form>
+
+</body>
+
+</html>
