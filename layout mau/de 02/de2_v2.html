@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de 02 version 2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* Header */
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #ccc;
+        }
+        .main {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Navbar */
+        nav {
+            width: 100%;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .menu li {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            background-color: #00A69B;
+            border-right: 1px solid #fff;
+            position: relative;
+        }
+        .menu li:last-child {
+            border-right: none;
+        }
+        .menu li:hover {
+            background-color: #ccc;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: red;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* Sub menu */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            width: 100%;
+            list-style-position: inside;
+        }
+        .submenu li {
+            border-bottom: 1px dotted #fff;
+            border-right: none;
+        }
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        /* Section */
+        section {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        .sieuthi {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .noidung {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+        }
+        .dong {
+            display: flex;
+            flex-direction: row;
+        }
+        .dong img {
+            width: 250px;
+            height: 200px;
+        }
+        .chu {
+            margin-left: 20px;
+        }
+        /* footer */
+        footer {
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Đồ gia dụng</a></li>
+                <li><a href="#">
+                    Điệnlạnh
+                    <ul class="submenu">
+                        <li><a href="#">Sản phầm điện lạnh</a></li>
+                        <li><a href="#">Tủ lạnh theo hãng</a></li>
+                        <li><a href="#">Máy giặt theo hãng</a></li>
+                        <li><a href="#">Điều hòa theo hãng</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">Điện tử - Âm thanh</a></li>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Máy tính - Linh kiện</a></li>
+                <li><a href="#">Hóa đơn mua hàng</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="sieuthi">
+                <h2>Siêu thị tại HÀ NỘI</h2>
+                <ul>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                    <li>Trần Anh - Cầu Giấy</li>
+                </ul>
+            </div>
+            <div class="noidung">
+                <div class="dong">
+                    <img src="./anh1.jpg" alt="">
+                    <div class="chu">
+                        <h4>Đèn sưởi phòng tắm Sunhouse</h4>
+                        <p>Thiết kết nhỏ gọn, đẹp mắt Đèn sưởi phòng tắm Sunhouse SHD2803 sử dụng bóng đèn có màu vàng đẹp mắt, có thể là vật trang trí cho không gian nhà bạn. Thiết kế nhỏ gọi không làm tốn đi không gian trong phòng tắm nhà bạn. Bóng đén halogen hồng ngoại làm bằng thủy tin rất bền. không chói mắt, chịu được nước lạnh đên 4 độ C khi đang hoạt động. Bóng đèn được mạ vàng không bị lóa, phát ra tia hồng ngoại tốt cho da, tốt cho sức khỏe của bạn</p>
+                    </div>
+                </div>
+                <div class="dong">
+                    <img src="./anh2.jpg" alt="">
+                    <div class="chu">
+                        <h4>Quạt sưởi hồng ngoại Sunhouse, SHD7013</h4>
+                        <p>Thiết kết nhỏ gọn Quạt sưởi hồng ngoại Sunhouse, SHD7013 dụng bóng đèn có màu vàng đẹp mắt, có thể là vật trang trí cho không gian nhà bạn. Thiết kế nhỏ gọi không làm tốn đi không gian trong phòng tắm nhà bạn. Bóng đén halogen hồng ngoại làm bằng thủy tin rất bền. không chói mắt, chịu được nước lạnh đên 4 độ C khi đang hoạt động. Bóng đèn được mạ vàng không bị lóa, phát ra tia hồng ngoại tốt cho da, tốt cho sức khỏe của bạn</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>Ban quyen CNTT_HAUI.COM</footer>
+</body>
+</html>
