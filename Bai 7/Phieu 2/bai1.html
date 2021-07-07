@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 - Phieu 2</title>
+</head>
+<body>
+    <ul id="list">
+        
+    </ul>
+    <br>
+        <label for="title">Enter Your Email Address</label>
+        <input type="text" name="input" id="input">
+        <input type="button" value="Add More" onclick="them()">
+        <br>
+        <br>
+        <label for="title">Enter Your Email Address</label>
+        <input type="text" name="input_value_remove" id="input_value_remove">
+        <input type="button" value="Remove " onclick="xoa()">
+
+    <!-- Javascript -->
+    <script>
+        var list_email = [];
+        var list = document.getElementById('list');
+        function them() {
+            var input_value = document.getElementById('input').value;
+            list_email.push(input_value)
+            var item = document.createElement('li');
+            item.innerText = input_value;
+            list.appendChild(item);
+        }
+        function xoa() {
+            var input_value_remove = document.getElementById('input_value_remove').value;
+            for(var i=0;i<list_email.length;i++) {
+                if(input_value_remove == list_email[i]) {
+                    list.removeChild(list.childNodes[i+1]); 
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>

@@ -7,12 +7,17 @@
     <title>Bai 3</title>
 </head>
 <body>
-    <img src="./pic_bulboff.gif" alt="bong den" id="img" onclick="changeColor()">
+    <img src="pic_bulboff.gif" alt="bong den" id="img" onclick="chaneImage()">
 
 
     <script>
-        function changeColor() {
-            document.getElementById('img').src = "./pic_bulbon.gif";
+        function chaneImage() {
+           var image = document.getElementById('img');
+           if (image.src.match("bulboff")) {
+               image.src = "pic_bulbon.gif";
+           }else {
+               image.src = "pic_bulboff.gif";
+           }
         }
     </script>
 </body>

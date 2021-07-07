@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+</head>
+<body>
+    <form action="">
+        <label for="sothunhat">Số thứ nhất</label>
+        <input type="text" name="sothunhat" id="sothunhat">
+        <br>
+        <input type="button" value="+" onclick="cong()">
+        <input type="button" value="-" onclick="tru()">
+        <input type="button" value="*" onclick="nhan()">
+        <input type="button" value="/" onclick="chia()">
+        <input type="button" value="^" onclick="muthua()">
+        <br>
+        <label for="sothuhai">Số thứ hai</label>
+        <input type="text" name="sothuhai" id="sothuhai">
+        <br>
+        <label for="ketqua">Kết quả</label>
+        <input type="text" name="ketqua" id="ketqua">
+    </form>
+
+    <script>
+        function cong() {
+            var sothunhat = parseFloat(document.getElementById('sothunhat').value);
+            var sothuhai = parseFloat(document.getElementById('sothuhai').value);
+            var ketqua = sothunhat + sothuhai;
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function tru() {
+            var sothunhat = parseFloat(document.getElementById('sothunhat').value);
+            var sothuhai = parseFloat(document.getElementById('sothuhai').value);
+            var ketqua = sothunhat - sothuhai;
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function nhan() {
+            var sothunhat = parseFloat(document.getElementById('sothunhat').value);
+            var sothuhai = parseFloat(document.getElementById('sothuhai').value);
+            var ketqua = sothunhat * sothuhai;
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function chia() {
+            var sothunhat = parseFloat(document.getElementById('sothunhat').value);
+            var sothuhai = parseFloat(document.getElementById('sothuhai').value);
+            var ketqua = sothunhat / sothuhai;
+            document.getElementById('ketqua').value = ketqua;
+        }
+        function muthua() {
+            var sothunhat = parseFloat(document.getElementById('sothunhat').value);
+            var sothuhai = parseFloat(document.getElementById('sothuhai').value);
+            var ketqua = Math.pow(sothunhat, sothuhai)
+            document.getElementById('ketqua').value = ketqua;
+        }
+    </script>
+
+
+</body>
+</html>
