@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 Phieu 1</title>
+</head>
+<body>
+    <p>Mảng ban đầu: </p>
+    <p id="array"></p>
+    <p>Mảng sau khi sắp xếp</p>
+    <p id="array2"></p>
+    <script>
+        var arr1 = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ];
+        document.getElementById('array').innerText = arr1;
+        console.log("array: ", arr1);
+        var arr2 = arr1.sort(function(a, b){
+            return a-b;
+        });
+        document.getElementById('array2').innerText = arr2;
+    </script>
+
+</body>
+</html>

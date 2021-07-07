@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 5 phieu 1</title>
+</head>
+<body>
+    
+
+    <script>
+       function toUpperCase(string) {
+           if (typeof(string) == 'string') {
+                var item = string.split(' ');
+                var list = [];
+                for (var i in item) {
+                    list.push(item[i].charAt(0).toUpperCase() + item[i].slice(1));
+                }
+                return list.join(' ')
+           }else {
+               console.log('du lieu khong hop le')
+           }
+        }
+       var a = toUpperCase("toi la nguyen XUAN hoang")
+       console.log(a)
+    </script>
+
+</body>
+</html>

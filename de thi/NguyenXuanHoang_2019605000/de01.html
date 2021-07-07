@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de 01</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+        }
+        header img {
+            width: 100%;
+            height:100%;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+            margin-top: 30px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .menu li {
+            height: 30px;
+            width: 100%;
+            text-align: center;
+
+        }
+        .menu li a {
+            text-decoration: none;
+            color: #000;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+        section {
+            font-size: 16px;
+            color: #000066;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .danhsach > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .danhsach > ul > li {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            background-color: #FFCCFF;
+            position: relative;
+            
+        }
+        .danhsach ul li:hover {
+            background-color: #66FFFF;
+        }
+        .danhsach ul li a {
+            text-decoration: none;
+            line-height: 50px;
+            color: #000;
+            text-transform: uppercase;
+        }
+        .subdanhsach {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            display: none;
+            z-index: 111;
+        }
+        .subdanhsach li {
+            text-align: left;
+            background-color: #FFCCFF;
+            padding-left: 10px;
+            list-style: none;
+        }
+        .danhsach > ul > li:hover .subdanhsach {
+            display: block;
+        }
+        .noidung {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            height: 600px;
+            justify-content: space-around;
+        }
+        .dong {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            height: 50%;
+        }
+        .item {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .item img {
+            width: 200px;
+            height: 200px;
+        }
+        .chu:hover {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00A69B;
+        }
+        footer {
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./header.png" alt="anh tieu de">
+    </header>
+    <div class="main">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Tư vấn</a></li>
+                <li><a href="#">Mua ở đâu</a></li>
+                <li><a href="#">Tin tưc & ưu đãi</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="danhsach">
+                <ul>
+                    <li><a href="#">
+                        tất cả sản phẩm
+                        <ul class="subdanhsach">
+                            <li><a href="#">tất cả sản phẩm</a></li>
+                            <li><a href="#">kem tẩy lông</a></li>
+                            <li><a href="#">tinh chất chiệt lông</a></li>
+                            <li><a href="#">combo sản phẩm</a></li>
+                            <li><a href="#">sản phẩm mới</a></li>
+                            <li><a href="#">sản phẩm bán chạy</a></li>
+                        </ul>
+                    </a></li>
+                    <li><a href="#">kem tẩy lông</a></li>
+                    <li><a href="#">tinh chất triệt lông</a></li>
+                    <li><a href="#">combo sản phẩm</a></li>
+                    <li><a href="#">sản phẩm mới</a></li>
+                    <li><a href="#">sản phẩm bán chạy</a></li>
+                </ul>
+            </div>
+            <div class="noidung">
+                <div class="dong">
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dong">
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./hinhanh.png" alt="anh minh hoa">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Namo Tech 150ml</p>
+                            <p><del>300.000đ</del> <span style="color: red;">145.000đ</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>Bản quyền CNTT.HAUI.COM</footer>
+</body>
+</html>
