@@ -16,7 +16,7 @@
         <input type="button" value="Add More" onclick="them()">
         <br>
         <br>
-        <label for="title">Enter Your Email Address</label>
+        <label for="title">Enter your email need to remove</label>
         <input type="text" name="input_value_remove" id="input_value_remove">
         <input type="button" value="Remove " onclick="xoa()">
 
@@ -35,10 +35,12 @@
             var input_value_remove = document.getElementById('input_value_remove').value;
             for(var i=0;i<list_email.length;i++) {
                 if(input_value_remove == list_email[i]) {
-                    list.removeChild(list.childNodes[i+1]); 
+                    list.removeChild(list.childNodes[i+1]);
+                    list_email.splice(i,1)
                 }
             }
         }
+       
     </script>
 
 
