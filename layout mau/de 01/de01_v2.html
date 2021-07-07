@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de 01 - version 2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            height: 100px;
+            width: 100%;
+            background-color: aqua;
+        }
+        .main {
+            width: 100%;
+            height: 700px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+        nav {
+            width: 25%;
+            height: 100%;
+        }
+        nav .menu {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style: none;
+            justify-content: center;
+        }
+        .menu li {
+            width: 200px;
+            height: 50px;
+            border-bottom: 1px solid #fff;
+            background-color: #8AD385;
+            padding-left: 10px;
+            align-self: center;
+            position: relative;
+        }
+        .menu li:last-child {
+            border-bottom: none;
+        }
+        .menu li:hover {
+            background-color: #CDE2CD;
+        }
+        .menu li a {
+            text-decoration: none;
+            line-height: 50px;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        .submenu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: none;
+            list-style: none;
+        }
+        section {
+            width: 75%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .nhasach {
+            width: 30%;
+
+        }
+        .nhasach ul li {
+            height: 30px;
+            margin: 25px 20px;
+        }
+        .nhasach ul li a {
+            line-height: 30px;
+        }
+        .noidung {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; 
+        }
+        .dong {
+            display: flex;
+        }
+        .dong img {
+            width: 250px;
+            height: 200px;
+        }
+        .chu {
+            margin-left: 20px;
+        }
+        footer {
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">
+                    Siêu thị sách
+                    <ul class="submenu">
+                        <li><a href="#">Sách mới</a></li>
+                        <li><a href="#">Sách bán chạy</a></li>
+                        <li><a href="#">Bảng giá danh mục</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">Siêu thị thành nghĩa</a></li>
+                <li><a href="#">Công ty in - DV in ấn</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Kiểm kê kho</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="nhasach">
+                <h3>Hệ thống siêu thị - Nhà sách</h3>
+                <ul>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                    <li>Nhà sách NGUYỄN VĂN CỪ chi nhánh QUẬN 1</li>
+                </ul>
+            </div>
+            <div class="noidung">
+                <div class="dong">
+                    <img src="./hoahoc.png" alt="anh hoa hoc">
+                    <div class="chu">
+                        <p>
+                            sách giáo khoa lớp 10 Tác giả: Bộ giáo dục và đạo tạo
+                            định nghĩa bìa mềm và xuất bản: Giáo dục Việt Nam Năm xuất bản 2021: Lượt xem 1.234 Giá bìa 100.000đ Giá bán 100.000d
+                        </p>
+                    </div>
+                </div>
+                <div class="dong">
+                    <img src="./cayco.png" alt="anh hoa hoc">
+                    <div class="chu">
+                        <p>
+                            sách giáo khoa lớp 10 Tác giả: Bộ giáo dục và đạo tạo
+                            định nghĩa bìa mềm và xuất bản: Giáo dục Việt Nam Năm xuất bản 2021: Lượt xem 1.234 Giá bìa 100.000đ Giá bán 100.000d
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>Bản quyền CNTT_HAUI.COM</footer>
+</body>
+</html>
