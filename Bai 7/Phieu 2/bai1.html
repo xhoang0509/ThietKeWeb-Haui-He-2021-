@@ -7,42 +7,31 @@
     <title>Bai 1 - Phieu 2</title>
 </head>
 <body>
-    <ul id="list">
-        
-    </ul>
-    <br>
-        <label for="title">Enter Your Email Address</label>
-        <input type="text" name="input" id="input">
-        <input type="button" value="Add More" onclick="them()">
-        <br>
-        <br>
-        <label for="title">Enter your email need to remove</label>
-        <input type="text" name="input_value_remove" id="input_value_remove">
-        <input type="button" value="Remove " onclick="xoa()">
 
-    <!-- Javascript -->
+    <p>
+        Enter Your Mail Address 
+        <input type="text" name="input email" id="input">
+        <button onclick="add()">Add More</button>
+    </p>
+    <p id="list">
+
+    </p>
     <script>
-        var list_email = [];
-        var list = document.getElementById('list');
-        function them() {
-            var input_value = document.getElementById('input').value;
-            list_email.push(input_value)
-            var item = document.createElement('li');
-            item.innerText = input_value;
-            list.appendChild(item);
+        function add() {
+            var elem = document.createElement('p');
+            elem.innerHTML = `
+            <p id="list-remove">
+                Enter Your Mail Address 
+                <input type="text" name="input email" id="input">
+                <button onclick="remove()">Remove</button>
+            </p>
+            `;
+            document.getElementById('list').appendChild(elem);
         }
-        function xoa() {
-            var input_value_remove = document.getElementById('input_value_remove').value;
-            for(var i=0;i<list_email.length;i++) {
-                if(input_value_remove == list_email[i]) {
-                    list.removeChild(list.childNodes[i+1]);
-                    list_email.splice(i,1)
-                }
-            }
+        function remove() {
+            document.getElementById('list-remove').remove()
         }
-       
     </script>
-
 
 </body>
 </html>
