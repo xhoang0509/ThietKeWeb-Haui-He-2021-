@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2 phieu 3</title>
+</head>
+<body>
+    <script>
+        function sortString(string1, string2) {
+            if(typeof(string1) == 'string' && typeof(string2) == 'string') {
+                var temp1 = string1.split('');
+                temp1.sort();
+                var temp2 = string2.split('');
+                temp2.sort();
+                var flag = false;
+                for (var i =0; i < temp1.length; i++) {
+                    if(temp1[i] != temp2[i]){
+                        flag = true;
+                        break;
+                    }
+                }
+                return !flag;
+            }else {
+                console.log('dữ liệu vào không hợp lệ');
+            }
+        }
+        console.log(sortString('abcd','acbd'));
+        console.log(sortString('abcde','edfa'));
+    </script>
+</body>
+</html>

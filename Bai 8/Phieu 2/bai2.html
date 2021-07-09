@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 2 phieu 2</title>
+</head>
+<body>
+    
+
+    <script>
+        function checkString_a_h(string) {
+            var count_a = 0;
+            var count_h = 0;
+            if (typeof(string) == 'string') {
+                for(var i in string) {
+                    if (string.charAt(i) == 'a') {
+                        count_a ++;
+                    }
+                    else if(string.charAt(i) == 'h') {
+                        count_h ++;
+                    }
+                }
+                if(count_a == count_h) {
+                    console.log('số lượng xuất hiện a và h BẰNG nhau !');
+                }else {
+                    console.log('số lượng của a và h KHÁC nhau !')
+                }
+            }else {
+                console.log('Dữ liệu nhập vào không đúng !')
+            }
+        }
+        var st = 'học Java thật vi diệu';
+        var st1 = 'học Java thật vi diệua';
+        checkString_a_h(st)
+        checkString_a_h(st1)
+        checkString_a_h(1   )
+    </script>
+
+</body>
+</html>

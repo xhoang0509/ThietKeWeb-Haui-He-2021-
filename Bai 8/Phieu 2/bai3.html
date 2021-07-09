@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 3 phieu 2</title>
+</head>
+<body>
+    
+    <script>
+        function transformText(string) {
+            var list = [];
+            if(typeof(string) == 'string') {
+                for (var i in string) {
+                    if(string.charAt(i).toUpperCase() == string.charAt(i)) {
+                        list.push(string.charAt(i).toLowerCase());
+                    }else {
+                        list.push(string.charAt(i).toUpperCase());
+                    }
+                }
+                return list.join('')
+            }else {
+                console.log('Dữ liệu nhập vào không đúng !')
+            }
+        }
+        var st = 'I love You';
+        var st1 = 'i love you';
+        var st2 = 'I LOVE YOU';
+        console.log(transformText(st));
+        console.log(transformText(st1));
+        console.log(transformText(st2));
+    </script>
+
+</body>
+</html>

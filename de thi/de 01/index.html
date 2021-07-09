@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>de 01</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        /* header */
+        header {
+            height: 100px;
+            width: 100%;
+            background-color: aqua;
+        }
+        /* main */
+        .main {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        nav {
+
+        }
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .menu li {
+            height: 50px;
+            text-align: center;
+            background-color: #FFCCFF;
+            width: 100%;
+            position: relative;
+        }
+        .menu li:hover {
+            background-color: #66FFFF;
+        }
+        .menu li a {
+            text-decoration: none;
+            line-height: 50px;
+            color: #000;
+        }
+        .submenu {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+            display: none;
+            list-style: none;
+            z-index: 111;
+        }
+        .submenu li {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        section {
+            font-size: 16px;
+            background-color: #fff;
+            color: #000066;
+            margin-top: 30px;
+        }
+        .nav-section ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .nav-section ul li {
+            height: 50px;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            border-radius: 40px;
+            margin: 0 10px;
+            background-color: #FFCCFF;
+        }
+        .nav-section ul li:hover {
+            background-color: #66FFFF;
+        }
+        .nav-section ul li a {
+            text-decoration: none;
+            line-height: 50px;
+            color: #000;
+        }
+        .noidung {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
+            height: 600px;
+
+        }
+        .dong {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .item {
+            text-align: center;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+        }
+        .item img {
+            width: 200px;
+            padding: 20px 20px;
+        }
+        .item .chu {
+            padding: 10px;
+        }
+        .item .chu:hover {
+            font-weight: bold;
+        }
+        .item:hover {
+            background-color: #00A69B;
+        }
+        .item span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <div class="main">
+        <nav>
+            <ul class="menu">
+                <li><a href="#">TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">
+                    SẢN PHẨM
+                    <ul class="submenu">
+                        <li><a href="#">Tất Cả Sản Phẩm</a></li>
+                        <li><a href="#">Kem Tẩy Lông</a></li>
+                        <li><a href="#">Tinh Chất Triệt Lông</a></li>
+                        <li><a href="#">Combo Sản Phẩm</a></li>
+                        <li><a href="#">Sản Phẩm Mới</a></li>
+                        <li><a href="#">Sản Phẩm Bán Chạy</a></li>
+                    </ul>
+                </a></li>
+                <li><a href="#">TƯ VẤN</a></li>
+                <li><a href="#">MUA Ở ĐÂU</a></li>
+                <li><a href="#">TIN TỨC & ƯU ĐÃI</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="nav-section">
+                <ul>
+                    <li><a href="#">TẤT CẢ SẢN PHẨM</a></li>
+                    <li><a href="#">KEM TẨY LÔNG</a></li>
+                    <li><a href="#">TINH CHẤT TRIỆT LÔNG</a></li>
+                    <li><a href="#">COMBO SẢN PHẨM</a></li>
+                    <li><a href="#">SẢN PHẨM MỚI</a></li>
+                    <li><a href="#">SẢN PHẨM BÁN CHẠY</a></li>
+                </ul>
+            </div>
+            <div class="noidung">
+                <div class="dong">
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dong">
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../NguyenXuanHoang_2019605000/hinhanh.png" alt="">
+                        <div class="chu">
+                            <p>Dung dịch sát khuẩn cá nhân Niano Tech 500ml</p> <del>300.000đ</del> <span>145.000đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer></footer>
+</body>
+</html>
