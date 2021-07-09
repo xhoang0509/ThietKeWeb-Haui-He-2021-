@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai1</title>
+         <meta charset="UTF-8">  
+         <link rel="stylesheet" href="./Bai1.css">
+    </head>
+    <body>
+        <p style="text-align: center;">Mouse over the squares and the backgroup color will change</p>
+    <ul class="nav">
+        <li onmouseover="mouseOver(this)"></li>
+        <li onmouseover="mouseOver1(this)"></li>
+        <li onmouseover="mouseOver2(this)"></li>
+    </ul>
+    <script>
+        
+        function mouseOver(obj){
+            obj.style.background= "Red";
+        }
+        function mouseOver1(obj){
+            obj.style.background = "blue";
+        }
+        function mouseOver2(obj){
+            obj.style.background = "Green";
+        }
+    </script>
+    </body>
+</html>

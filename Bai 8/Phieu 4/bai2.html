@@ -5,14 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bai 2 phieu 4</title>
+    <style>
+        #inputNumber {
+            margin-left: 50px;
+        }
+        #inputText {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <label>Nhập một số 1-25: </label>
-    <input type="number" id="input">
-
+    <input type="number" id="inputNumber">
+    <br>
+    <label>Nhập chuỗi cần mã hóa</label>
+    <input type="text" id="inputText" >
+    <button onclick="code()">Mã hóa</button>
+    <br>
+    <label>Nhập chuỗi cần giải hóa</label>
+    <input type="text" id="inputText">
+    <button>Giải hóa</button>
+    <br>
     <script>
         var list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
         
+        function code() {
+            var n = parseInt(document.getElementById('inputNumber').value);
+            var inputText = document.getElementById('inputText').value
+            var index = [];
+            var text_list = inputText.split("");
+            var encode_list = [];
+            for(i in text_list) {
+                for(j in list) {
+                    if(text_list[i] == list[j]) {
+                        encode_list.push(parseInt(j) + n);
+                    }
+                }
+            }
+            var sum_encode_list = encode_list.reduce(function (total, current) {
+                return total += current
+            },0);
+            console.log(sum_encode_list)
+            // console.log(index, n,inputText, text_list);
+        }
     </script>
 
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai1</title>
+         <meta charset="UTF-8">  
+    </head>
+    <body>
+        <ul id="DS" style="list-style: none;">
+            <li>Enter Your Mail Address <input type="text" name="nhap" id="nhap"> <button type="button" onclick = "myFunction()">Add More</button></li>
+        </ul>
+        <script type="text/JavaScript">
+            function myFunction(){
+              var text = document.createElement("p");
+              var text1 = document.createTextNode("Enter Your Mail Address")
+              text.appendChild(text1);
+              document.getElementById("DS").appendChild(text);
+              var node = document.createElement("INPUT");
+              document.getElementById("DS").appendChild(node);
+              var nut = document.createElement("BUTTON");
+              var tennut = document.createTextNode("Remove");
+              nut.appendChild(tennut);
+              document.getElementById("DS").appendChild(nut);
+              var tenid = document.createById("demo");
+            }
+    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai1</title>
+         <meta charset="UTF-8">  
+    </head>
+    <body>
+        
+        <h1 style="margin-left: 450px;">Máy tính casio xịn xò </h1>
+        <style>
+            #the{
+                width: 40px;
+            }
+            #the1{
+                margin-left: 570px;
+                margin-top: 10px;
+            }
+        </style>
+        <table border="1" style="border-collapse: collapse;text-align: center;margin-left: 500px;">
+            <tr>
+                <td colspan="6"><input type="text" id="demo"></td>
+                
+            </tr>
+            <tr>
+                <td colspan="1"><input type="text" id = "the"></td>
+                <td colspan="2"><button type="button" onclick="Bam('bksp')">BkSp</button></td>
+                <td colspan="2"><button type="button" onclick="Xoa1()">CE</button></td>
+                <td colspan="2"><button type="button" onclick="Xoa()">C</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="Bam('mc')">MC</button></td>
+                <td><button type="button" onclick="Bam(7)">7</button></td>
+                <td><button type="button" onclick="Bam(8)">8</button></td>
+                <td><button type="button" onclick="Bam(9)">9</button></td>
+                <td><button type="button" onclick="Bam('/')">/</button></td>
+                <td><button type="button" onclick="Hammu()">sqr</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="Bam('mr')">MR</button></td>
+                <td><button type="button" onclick="Bam(4)">4</button></td>
+                <td><button type="button" onclick="Bam(5)">5</button></td>
+                <td><button type="button" onclick="Bam(6)">6</button></td>
+                <td><button type="button" onclick="Bam('*')">*</button></td>
+                <td><button type="button" onclick="Bam('%')">%</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="Bam('ms')">MS</button></td>
+                <td><button type="button" onclick="Bam(1)">1</button></td>
+                <td><button type="button" onclick="Bam(2)">2</button></td>
+                <td><button type="button" onclick="Bam(3)">3</button></td>
+                <td><button type="button" onclick="Bam('-')">-</button></td>
+                <td><button type="button" onclick="Bam('1/x')">1/x</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="Bam('m+')">M+</button></td>
+                <td><button type="button" onclick="Bam(0)">0</button></td>
+                <td><button type="button" onclick="Bam('+/-')">+/-</button></td>
+                <td><button type="button" onclick="Bam('.')">.</button></td>
+                <td><button type="button" onclick="Bam('+')">+</button></td>
+                <td><button type="button" onclick="Tinh()">=</button></td>
+            </tr>
+        </table>
+        <button type="button" id = "the1">More Options</button>
+        <script>
+             var a = "";
+             var ketqua,b;
+            function Bam(x){
+                a += x;
+                document.getElementById("demo").value = a;
+            }
+            function Tinh(){
+                ketqua = eval(a);
+                document.getElementById("demo").value = ketqua; 
+            }
+            function Xoa(){
+                document.getElementById("demo").value = "";
+                a = " ";
+            }
+            function Hammu(){
+                a = a * a;
+                document.getElementById("demo").value = a;           
+             }
+            //  function Xoa1(){
+            //     var b = a.pop();
+            //     //  a = a - b;
+            //      document.getElementById("demo").value = b;
+            //  }
+        </script>
+    </body>
+</html>

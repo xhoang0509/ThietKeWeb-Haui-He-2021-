@@ -8,22 +8,15 @@
 </head>
 <body>
     <p>Chào mừng đến website: </p>
-    <input type="text" name="input" id="input" onfocus = "functionFocus()">
+    <input type="button" onclick = "changeColor()" value="đổi màu nền">
+
+
+    <script>
+        function changeColor() {
+            var color = prompt('Nhập màu nền cần đổi', 'green');
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
 </body>
-
-<script>
-    var isFocus = true
-
-    function functionFocus() {
-        if (isFocus) {
-            var input_value = prompt('Nhập màu nền của trang (red/green/yellow...): ');
-            if (input_value != null) {
-                document.body.style.backgroundColor = input_value
-            }
-            isFocus = false 
-        }     
-    }
-    
-</script>
-
 </html>

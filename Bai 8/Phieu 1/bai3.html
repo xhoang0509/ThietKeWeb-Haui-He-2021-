@@ -10,7 +10,32 @@
     
     <script>
         var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        // lấy các phẩn tử trùng nhau trong mảng vào mảng mới a3
+        var a3 = [];
+        for (var i = 0; i < arr1.length; i++) {
+            if(arr1.indexOf(arr1[i]) != arr1.lastIndexOf(arr1[i])) {
+                a3.push(arr1[i]);
+            }
+        }
+        console.log(a3)
+        // đếm số lần xuất hiện các phần tử trong mảng
+        var a2 = [];
+        for(var i = 0; i < a3.length; i++) {
+            var count = 0;
+            for (var j = 0; j < arr1.length; j++) {
+                if(a3[i] == arr1[j]) {
+                    count ++;
+                }
+            }
+            a2[i] = count;
+        }
         
+        console.log(a2)
+        for (var i = 0; i < a3.length; i++) {
+            if(a2[i] > 0) {
+                console.log(`${a3[i]} xuất hiện ${a2[i]} lần trong mảng`);
+            }
+        }
     </script>
 
 </body>

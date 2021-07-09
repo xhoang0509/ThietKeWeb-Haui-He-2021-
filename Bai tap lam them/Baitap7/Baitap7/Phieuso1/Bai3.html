@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai3</title>
+         <meta charset="UTF-8">  
+         <link rel="stylesheet" href="./Bai3.css">
+    </head>
+    <body>
+        <div> 
+        <img src="anh1.jpg" alt="" style="padding-left: 500px;padding-top: 200px;" id = "anh1" onclick="Thaydoi()">
+        <!--<img src="./anh2.jpg" alt="" style="padding-left: 500px;padding-top: 200px;" id = "anh2">-->
+        </div>
+        <script>
+	    setInterval(Thaydoi,1000);
+            //var check = true;
+            function Thaydoi(){
+		
+		var anh = document.getElementById("anh1");
+		
+		if(anh.src.indexOf("anh1.jpg")>=0){//den tat
+			anh.src = "anh2.jpg";
+		}
+		else{
+			anh.src = "anh1.jpg";
+		}
+               /* if(check)
+            {
+                document.getElementById("anh1").style.zIndex = -1;
+                document.getElementById("anh2").style.zIndex = 1;
+                check = false;
+            }else if(!check){
+                document.getElementById("anh1").style.zIndex = 1;
+                document.getElementById("anh2").style.zIindex = -1;
+                check = true;
+            }*/
+            }
+        </script>
+    </body>
+</html>

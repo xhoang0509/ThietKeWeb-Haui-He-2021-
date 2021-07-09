@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai2</title>
+         <meta charset="UTF-8">  
+    </head>
+    <body>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+        </style>
+        <div id="Maunen">
+            <p>Chào mừng đến với Website</p>
+            <br>
+        <button type="button" onclick="myFunction()">Đổi màu nền</button>
+        <script type="text/JavaScript">
+            var person;
+            function myFunction() {
+                person = window.prompt("Nhập màu nền của trang","Red");
+                document.body.style.backgroundColor = person;
+            }
+        </script>
+        </div>
+    </body>
+</html>

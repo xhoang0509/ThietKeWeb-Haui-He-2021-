@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai4</title>
+         <meta charset="UTF-8">  
+    </head>
+    <body>
+       Số thứ nhất : <input type="text" name="nhap1" id="num1"> 
+       <br><br>
+       <button type="button" onclick="Tinh('+')">+</button>
+       <button type="button" onclick="Tinh('-')">-</button>
+       <button type="button" onclick="Tinh('*')">*</button>
+       <button type="button" onclick="Tinh('/')">/</button>
+       <button type="button" onclick="Tinh('^')">^</button>
+       <br><br>
+       Số thứ hai : <input type="text" name="nhap2" id="num2"> <br> <br>
+       <button onclick ="myFunction()">Kết quả</button> : 
+       <input type="text" id="rs"></input>
+       <script>
+		function Tinh(op){
+			var n1 = document.getElementById("num1").value;
+			var n2 = document.getElementById("num2").value;
+			var rs;
+         		switch(op){
+				case '+':rs = n1 + n2; break;
+				case '-':rs = n1 - n2; break;
+				case '*':rs = n1*n2; break;
+				case '/':if(n2!=0) rs = n1/n2; break;
+				case '^':rs = Math.pow(n1,n2);break;
+			}
+			document.getElementById("rs").value = rs;
+		}
+           var c;
+           function Bam(x){
+                    c = x;
+                }
+               function myFunction(){
+                var a = document.getElementById("nhap1").value;
+                var b = document.getElementById("nhap2").value;
+                var d,ketqua;
+                    d = a + c + b;
+                    ketqua = eval(d);
+                    document.getElementById("demo").value = ketqua;
+               }
+                
+       </script>
+    </body>
+</html>

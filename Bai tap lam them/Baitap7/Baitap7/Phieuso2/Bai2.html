@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai1</title>
+         <meta charset="UTF-8">  
+    </head>
+    <body>
+        <table border="1" style="border-collapse:collapse ;">
+            <tr>
+                <th>
+                    <input type="checkbox" id="demo" name ="" onclick="myFunction2()">
+                </th>
+                <th>Order No</th>
+                <th>Customer Name</th>
+                <th>Order Date</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo1" name ="" onclick="myFunction3()">
+                </td>
+                <td>SHD 11</td>
+                <td>Nguyen Van A</td>
+                <td>12/2/2009</td>
+                <td><input type="text" value="20000"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="demo2" name ="" onclick="myFunction3()">
+                    <label for="art"></label>
+                </td>
+                <td>SHD 12</td>
+                <td>Nguyen Bich Thao</td>
+                <td>12/11/2009</td>
+                <td><input type="text" value="55000"></td>
+            </tr>
+            <tr>
+                <th colspan="4">Total</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: right;"><button type="button">Update</button>
+                  <button type="button">Save</button>
+                  <button type="button" onclick="myFunction()">Back</button>
+                  <button type="submit" onclick="myFunction1()" >Reset</button>
+                </td>
+            </tr>
+        </table>
+        <script>
+    
+            function myFunction1() {
+
+               var a = document.getElementById("demo").checked;
+               var b = document.getElementById("demo1").checked;
+               var c = document.getElementById("demo2").checked;
+                    if(a === true)
+                    { 
+                        document.getElementById("demo").checked = false;
+                        
+                    }
+                    if(b === true)
+                    { 
+                        document.getElementById("demo1").checked = false;
+                        
+                    }
+                    if(c === true)
+                    { 
+                        document.getElementById("demo2").checked = false;
+                        
+                    }
+                }
+                function myFunction2(){
+                    var a = document.getElementById("demo").checked;
+                    var b = document.getElementById("demo1").checked;
+                    var c = document.getElementById("demo2").checked;
+                     if(a == true){
+                        document.getElementById("demo1").checked = true;
+                        document.getElementById("demo2").checked = true;
+                     }
+                     else{
+                        document.getElementById("demo1").checked = false;
+                        document.getElementById("demo2").checked = false;
+                     }
+                }
+                function myFunction3(){
+                    var a = document.getElementById("demo").checked;
+                    var b = document.getElementById("demo1").checked;
+                    var c = document.getElementById("demo2").checked;
+                    if(b == true && c ==true)
+                    {
+                        document.getElementById("demo").checked = true;
+                    }
+                    else{
+                        document.getElementById("demo").checked = false;
+                    }
+                }
+        </script>
+    </body>
+</html>
