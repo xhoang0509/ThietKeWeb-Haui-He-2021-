@@ -8,10 +8,15 @@
 </head>
 <body>
     <script>
-        var color = ['Blue', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow'];
-        var name = ["st", "nd", "rd", "th"]
-        for (var i in color) {
-            console.log(`${name[i]} ${name} choice is ${color[i]}`);
+        var colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indio", "Yello"];
+        var names = ["th", "st", "nd", "rd"];
+        for (var i=0; i < colors.length; i++) {
+            if (i < 3) {
+                console.log(`${i+1} ${names[i+1]} is ${colors[i]}`);
+            }
+            if(i > 3) {
+                console.log(`${i+1} ${names[0]} is ${colors[i]}`);
+            }
         }
     </script>
 </body>
