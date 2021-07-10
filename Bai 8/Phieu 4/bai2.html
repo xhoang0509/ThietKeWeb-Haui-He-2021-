@@ -18,35 +18,70 @@
     <label>Nhập một số 1-25: </label>
     <input type="number" id="inputNumber">
     <br>
+    <br>
+
     <label>Nhập chuỗi cần mã hóa</label>
     <input type="text" id="inputText" >
     <button onclick="code()">Mã hóa</button>
     <br>
-    <label>Nhập chuỗi cần giải hóa</label>
-    <input type="text" id="inputText">
-    <button>Giải hóa</button>
+    Chuỗi đã được mã hóa thành: 
+    <span id="output-code"></span>
     <br>
+    <br>
+
+    <label>Nhập chuỗi cần giải hóa</label>
+    <input type="text" id="inputCode">
+    <button onclick="decode()">Giải hóa</button>
+    <br>
+    Chuỗi đã được giải hóa thành: 
+    <span id="output-text"></span>
+
+
+
     <script>
-        var list = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+        var key = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
         
         function code() {
             var n = parseInt(document.getElementById('inputNumber').value);
-            var inputText = document.getElementById('inputText').value
-            var index = [];
+            var inputText = document.getElementById('inputText').value;
             var text_list = inputText.split("");
             var encode_list = [];
             for(i in text_list) {
-                for(j in list) {
-                    if(text_list[i] == list[j]) {
-                        encode_list.push(parseInt(j) + n);
+                var a = (key.indexOf(text_list[i]) + n) % 26 ;
+                encode_list.push(a);
+            }
+            var result = []
+            for (var i in key) {
+                for (var j in encode_list) {
+                    if (i == encode_list[j]) {
+                        result.push(key[i]);
                     }
                 }
             }
-            var sum_encode_list = encode_list.reduce(function (total, current) {
-                return total += current
-            },0);
-            console.log(sum_encode_list)
-            // console.log(index, n,inputText, text_list);
+            result = result.join('')
+            console.log(text_list, encode_list, result)
+            document.getElementById('output-code').innerHTML = result;
+        }
+        function decode() {
+            var n = parseInt(document.getElementById('inputNumber').value);
+            var inputText = document.getElementById('inputCode').value;
+            var text_list = inputText.split("");
+            var encode_list = [];
+            for(i in text_list) {
+                var a = (key.indexOf(text_list[i]) - n) % 26 ;
+                encode_list.push(a);
+            }
+            var result = []
+            for (var i in key) {
+                for (var j in encode_list) {
+                    if (i == encode_list[j]) {
+                        result.push(key[i]);
+                    }
+                }
+            }
+            result = result.join('')
+            console.log(text_list, encode_list, result)
+            document.getElementById('output-text').innerHTML = result;
         }
     </script>
 

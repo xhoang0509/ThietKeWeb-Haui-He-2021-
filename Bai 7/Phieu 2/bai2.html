@@ -4,52 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bai 2 Phieu 2</title>
+    <title>bai 2 phieu 2</title>
     <style>
         table {
             border-collapse: collapse;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <table border="1">
-        <thead>
-            <tr>
-                <th><input type="checkbox" name="" id=""></th>
-                <th>Order</th>
-                <th>Customer Name</th>
-                <th>Order Date</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>SHD 11</td>
-                <td>Nguyen Van A</td>
-                <td>12/2/2009</td>
-                <td><input type="text" name="" id="" value="20000"></td>
-            </tr>
-            <tr>
-                <td><input type="checkbox" name="" id=""></td>
-                <td>SHD 12</td>
-                <td>Nguyen Bich Thao</td>
-                <td>12/11/2009</td>
-                <td><input type="text" name="" id="" value="55000"></td>
-            </tr>
-            <tr>
-                <td colspan="4" align="center">Total: </td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td colspan="5" align="center">
-                    <input type="button" value="Update">
-                    <input type="button" value="Save">
-                    <input type="button" value="Back">
-                    <input type="button" value="Reset">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+   <form action="Process.php">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" name="" id="checkbox-all" onclick="myFunction1()"></th>
+                    <th>Order No</th>
+                    <th>Customer Name</th>
+                    <th>Order Date</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id="checkbox1" onclick="myFunction2()"></td>
+                    <td>SHD 11</td>
+                    <td>Nguyen Van A</td>
+                    <td>12/2/2009</td>
+                    <td><input type="text" name="" id="" value="20000"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="checkbox2" onclick="myFunction3()"></td>
+                    <td>SHD 12</td>
+                    <td>Nguyen Bich Thao</td>
+                    <td>12/2/2009</td>
+                    <td><input type="text" name="" id="" value="55000"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total</td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <input type="button" value="Update">
+                        <input type="submit" value="Save">
+                        <input type="button" value="Back">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   </form>
+
+
+   <script>
+       function myFunction1() {
+            document.getElementById('checkbox1').checked = true;
+            document.getElementById('checkbox2').checked = true;
+            var checkbox_all = document.getElementById('checkbox-all').checked
+            if(!checkbox_all) {
+                document.getElementById('checkbox1').checked = false;
+                document.getElementById('checkbox2').checked = false;
+            }
+        }
+        function myFunction2() {
+            var checkbox1 = document.getElementById('checkbox1').checked;
+            var checkbox2 = document.getElementById('checkbox2').checked;
+            if(checkbox1 == true && checkbox2 == true) {
+                document.getElementById('checkbox-all').checked = true;
+            }else {
+                document.getElementById('checkbox-all').checked = false;
+            }
+        }
+        function myFunction3() {
+            var checkbox1 = document.getElementById('checkbox1').checked;
+            var checkbox2 = document.getElementById('checkbox2').checked;
+            if(checkbox1 == true && checkbox2 == true) {
+                document.getElementById('checkbox-all').checked = true;
+            }else {
+                document.getElementById('checkbox-all').checked = false;
+            }
+        }
+   </script>
+
 </body>
 </html>
