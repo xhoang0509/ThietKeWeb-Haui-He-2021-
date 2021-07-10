@@ -51,15 +51,16 @@
                 encode_list.push(a);
             }
             var result = []
-            for (var i in key) {
-                for (var j in encode_list) {
-                    if (i == encode_list[j]) {
+            for (var j in encode_list) {
+                for (var i in key) {
+                if (i == encode_list[j]) {
                         result.push(key[i]);
                     }
                 }
             }
+            console.log(n, inputText, text_list, encode_list)
             result = result.join('')
-            console.log(text_list, encode_list, result)
+            // console.log(text_list, encode_list, result)
             document.getElementById('output-code').innerHTML = result;
         }
         function decode() {
@@ -72,8 +73,8 @@
                 encode_list.push(a);
             }
             var result = []
-            for (var i in key) {
-                for (var j in encode_list) {
+            for (var j in encode_list) {
+                for (var i in key) {
                     if (i == encode_list[j]) {
                         result.push(key[i]);
                     }
