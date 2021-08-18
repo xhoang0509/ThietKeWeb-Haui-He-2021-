@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài kiếm tra số 2 - Đề 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header,
+        footer {
+            height: 50px;
+            width: 100%;
+            background-color: blue;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        section {
+            display: flex;
+            align-items: center;
+        }
+        .menu {
+            list-style: none;
+        }
+        .item,
+        .subitem {
+            margin-bottom: 2px;
+            padding: 8 32px;
+            position: relative;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link,
+        .sublink {
+            display: block;
+            line-height: 50px;
+            text-decoration: none;
+            background-color: rgb(172,35,49);
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 16px;
+        }
+        .link:hover,
+        .sublink:hover {
+            color: yellow;
+            background-color: red;
+        }
+        .sublist {
+            position: absolute;
+            margin-left: 4px;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .sublist::after {
+            
+            background-color: red;
+
+        }
+        .form {
+            width: 600px;
+            height: 200px;
+            background-color: blue;
+            border-radius: 20px;
+            margin-left: 500px;
+            color: #fff;
+            padding: 16px 32px;
+        }
+        label {
+            margin-right: 32px;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        #address {
+            margin-left: 18px;
+        }
+        #submit {
+            display: flex;
+            margin: 0 auto;
+            padding: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>bài kiểm tra số 2</header>
+    <section>
+        <ul class="menu">
+            <li class="item"><a href="#" class="link">Lập trình Java</a></li>
+            <li class="item"><a href="#" class="link">
+                Lập trình Web
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">Tài liệu HTML</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Tài liệu CSS</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Tài liệu Javascript</a></li>
+                </ul>
+            </a></li>
+            <li class="item"><a href="#" class="link">Lập trình C#</a></li>
+            <li class="item"><a href="#" class="link">Lập trình web</a></li>
+            <li class="item"><a href="#" class="link">Lập trình hướng đối tượng</a></li>
+            <li class="item"><a href="#" class="link">Cơ sở dữ liệu</a></li>
+        </ul>
+        <div class="form">
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname">
+            <br>
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address">
+            
+            <br>
+            <br>
+            <label>Giới tính</label>
+            Nam
+            <input type="radio" name="gender" id="">
+            Nữ
+            <input type="radio" name="gender" id="">
+            Khác
+            <input type="radio" name="gender" id="">
+            <br>
+            <label>Sở thích</label>
+            Sữa
+            <input type="checkbox" name="favorite" id="">
+            Chè
+            <input type="checkbox" name="favorite" id="">
+            Phở
+            <input type="checkbox" name="favorite" id="">
+
+            <br>
+            <br>
+            <button id="submit" onclick="checkInput()">Kiểm tra</button>
+        </div>
+    </section>
+    <footer>Bản quyền thuộc về test 2</footer>
+
+    <!-- nguyen xuan hoang -->
+
+    <script>
+        function checkInput () {
+            var inputValue = document.getElementById('fullname').value;
+            if (inputValue == "") {
+                alert("Dữ liệu của ô họ tên chưa nhập");
+                document.getElementById('fullname').focus();
+                return;
+            }
+            inputValue = inputValue.trim();
+            var temp = inputValue.split(" ");
+            var tenChuan = new Array();
+            for (var i = 0; i < temp.length; i++) {
+                if (temp[i] != '') {
+                    var a = temp[i][0].toUpperCase() + temp[i].slice(1);
+                    tenChuan.push(a);
+                }
+            }
+            document.getElementById('fullname').value = tenChuan.join(' ');
+        }
+    </script>
+</body>
+</html>
