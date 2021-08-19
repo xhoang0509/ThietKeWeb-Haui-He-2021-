@@ -22,6 +22,7 @@
         }
         input[type="text"] {
             width: 200px;
+            font-size: 20px;
         }
         button {
             padding: 4px 8px;
@@ -74,6 +75,7 @@
             if (inputValue == "") {
                 alert("Vui lòng nhập dữ liệu !");
                 document.getElementById("input").focus();
+                return;
             }
 
             inputValue = inputValue.trim();
@@ -93,12 +95,22 @@
         
         function tinh() {
             var inputValue = parseInt(document.getElementById("input2").value);
-            if (inputValue == "") {
+            // console.log(inputValue);
+            if (isNaN(inputValue)) {
                 alert("Vui lòng nhập dữ liệu !");
                 document.getElementById("input2").focus();
+                return;
             }
-            console.log(inputValue, typeof inputValue)
             
+            var sum = 0;
+            for (var i = 1; i < inputValue; i++) {
+                for (var j = 1; j <= i; j++) {
+                    if (j * j == i) {
+                        sum += i;
+                    }
+                }
+            }
+            document.getElementById("output2").value = sum;
         }
     </script>
 </body>
