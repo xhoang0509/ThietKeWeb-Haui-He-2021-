@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minh họa một số hàm xử lý chuỗi</title>
+<meta charset="utf-8">
+</head>
+<body>
+	<label for="name">Nhập vào họ tên</label>
+	<input type="text" name="name" id="name" required placeholder="Nhập họ tên" size="30"><br>
+	<label for="result">Số từ trong họ tên</label>
+	<input type="text" name="result" id="result" readonly="true" size="30"><br>
+	<button type="button" onclick="dem()">Đếm sử dụng regular expression</button>
+	<button type="button" onclick="dem1()">Đếm không sử dụng regular expression</button>
+
+	
+	<script type="text/javascript">
+		function dem(){
+			var name = document.getElementById("name").value;
+			if(name==""){
+				alert("Dữ liệu của ô họ tên chưa nhập");
+				document.getElementById("name").focus();
+				return;
+			}
+			name = name.trim().replace(/ +/g," ");//thay một hoặc nhiều dấu cách bằng 1 dấu cách
+			document.getElementById("name").value = name;
+			var temp = name.split(" ");
+			document.getElementById("result").value = temp.length;
+		}
+
+		function dem1(){
+			var name = document.getElementById("name").value;
+			if(name==""){
+				alert("Dữ liệu của ô họ tên chưa nhập");
+				document.getElementById("name").focus();
+				return;
+			}
+			name = name.trim();
+			var temp = name.split(" ");
+			var count = 0;
+			var tenChuan = new Array();
+			for(var i=0;i<temp.length;i++){
+				if(temp[i]!=""){
+					count++;
+					tenChuan.push(temp[i]);
+				}
+			}
+			document.getElementById("name").value = tenChuan.join(" ");
+			
+			document.getElementById("result").value = count;
+		}
+	</script>
+</body>
+</html>

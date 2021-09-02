@@ -42,6 +42,7 @@
             padding: 10px 0;
             position: relative;
             border-bottom: 1px solid white;
+            padding-left: 32px;
         }
         .menu li:hover {
             background-color: red;
@@ -62,6 +63,7 @@
             width: 100%;
             list-style: none;
             z-index: 111;
+            margin-left: 2px;
         }
         .menu li:hover .submenu {
             display: block;
@@ -131,10 +133,10 @@
                 <br>
                 <p>
                     <label for="">Số hoàn hảo nhỏ hơn hoặc bằng n: </label>
-                    <input type="text" name="" id="output" onchange="thaydoi()">
+                    <input type="text" name="" id="output" readonly="true" onchange="thaydoi()">
                 </p>
                 <br>
-                <input type="button" value="Tính" onclick="tinh()">
+                <input type="button" value="Tính" onclick="tinh()" style="padding: 8px">
             </form>
         </section>
     </div>
@@ -158,9 +160,10 @@
         function tinh() {
             result = [];
             var n = parseInt(document.getElementById('n').value);
-        
+    
             if(isNaN(n)) {
                 alert('Không được để trống');
+                document.getElementById('n').focus();
             }else {
                 var count = 0;
                 for (var i = 1; i <= n; i ++) {

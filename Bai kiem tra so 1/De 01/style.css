@@ -4,180 +4,114 @@
     box-sizing: border-box;
 }
 
-/* Header */
-.header {
+header,
+footer {
     width: 100%;
     height: 60px;
-    background-color: #ccc;
-}
-
-.header__list {
-    display: flex;
-    padding: 0 32px;
-    list-style: none;
-    justify-content: space-between;
-}
-
-.header__item {
-
-}
-
-.header__link {
-    display: block;
-    color: #000;
-    font-size: 16px;
-    line-height: 60px;
+    background-color: yellow;
+    text-align: center;
     text-transform: uppercase;
-    text-decoration: none;
+    line-height: 60px;
 }
 
-/* Section */
-.section {
-    margin-top: 16px;
-    font-size: 16px;
-    color: #000066;
+nav {
 
 }
 
-.nav {
-    
-}
-
-.nav__list {
+.list {
     display: flex;
-    padding: 0 32px;
     list-style: none;
     justify-content: space-between;
-    background-color: #FFCCFF;
 }
 
-.nav__item {
+.item {
     position: relative;
     flex: 1;
 }
 
+.item:hover .sublist {
+    display: block;
+}
 
-.nav__link:hover {
+.link,
+.sublink {
+    display: block;
+    text-decoration: none;
+    background-color: #FFCCFF;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.link:hover,
+.sublink:hover {
     background-color: #66FFFF;
 }
 
-.nav__link {
-    display: block;
-    color: #000;
-    font-size: 16px;
-    line-height: 60px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-}
-
-.nav__item:hover .subnav__list {
-    display: block;
-}
-
-.subnav__list {
+.sublist {
     position: absolute;
     top: 100%;
     left: 0;
-    list-style: none;
     width: 100%;
-    display: none;
-    background-color: #fff;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.subnav__item {
-
-}
-
-.subnav__link {
-    background-color: #FFCCFF;
-    display: block;
-    color: #000;
-    font-size: 16px;
-    line-height: 40px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding-left: 16px;
-    margin-top: 8px;
-}
-
-.subnav__link:hover {
-    background-color: #66FFFF;
-}
-
-/* Section content */
-.content {
-    margin-top: 16px;
-}
-
-.content__nav-list {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 32px;
-    height: 40px;
+    display: none;
 }
 
-.content__nav-item {
-    
-}
-
-.content__nav-link {
-    display: block;
-    padding: 0 8px;
-    text-decoration: none;
-    color: #000;
-    text-transform: uppercase;
-    font-size: 16px;
-    line-height: 40px;
-    border-radius: 40px;
-    text-align: center;
-    border: 2px solid red;
-}
-
-.content__nav-link:hover {
-    background-color: #FFCCFF;
-}
-
-/* Product */
-.product {
-    margin-top: 16px;
-}
-
-.product__list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.product__item {
-    width: 20%;
+.container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    color: #000066;
+    font-size: 16px;
+}
+
+.content-nav-list {
+    margin-top: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.content-nav-item {
+
+}
+
+.content-nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 20px 10px;
+    border: 1px solid #fa7979;
+    border-radius: 50px;
+}
+
+.content-nav-link:hover {
+    background-color: #fa7979;
+}
+
+
+.content-list {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin-top: 16px;
-    margin-left: 32px;
-    margin-right: 32px;
-    border: 1px solid #000;
+    justify-content: center;
 }
 
-.product__item-img {
-    margin-top: 8px;
-    width: 150px;
-    height: 150px;
-    background-color: #ccc;
+.content-item {
+    width: 25%;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
 }
 
-.product__item-content {
-    text-align: center;
+.content-img {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
 }
 
-.product__item-content:hover {
-    color: #00A69B;
+
+strong:hover {
     font-weight: bold;
-}
-.product__item-price {
-    color: red;
+    color: #00A69B;
 }

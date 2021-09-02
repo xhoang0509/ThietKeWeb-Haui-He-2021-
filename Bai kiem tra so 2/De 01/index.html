@@ -123,12 +123,12 @@
             <br>
             <br>
             <label>Giới tính</label>
-            Nam
-            <input type="radio" name="gender" id="">
-            Nữ
-            <input type="radio" name="gender" id="">
-            Khác
-            <input type="radio" name="gender" id="">
+            <label for="male">Nam</label>
+            <input type="radio" name="gender" id="male">
+            <label for="famale">Nữ</label>
+            <input type="radio" name="gender" id="famale">
+            <label for="orther">Khác</label>
+            <input type="radio" name="gender" id="orther">
             <br>
             <label>Sở thích</label>
             Sữa
@@ -148,24 +148,32 @@
     <!-- nguyen xuan hoang -->
 
     <script>
-        function checkInput () {
-            var inputValue = document.getElementById('fullname').value;
-            if (inputValue == "") {
-                alert("Dữ liệu của ô họ tên chưa nhập");
-                document.getElementById('fullname').focus();
+        function checkInput() {
+            var fullName = document.getElementById('fullname').value
+
+            if (fullName == '') {
+                alert('Vui long nhap du lieu')
+                document.getElementById('fullname').focus()
                 return;
             }
-            inputValue = inputValue.trim();
-            var temp = inputValue.split(" ");
-            var tenChuan = new Array();
-            for (var i = 0; i < temp.length; i++) {
-                if (temp[i] != '') {
-                    var a = temp[i][0].toUpperCase() + temp[i].slice(1);
-                    tenChuan.push(a);
+
+            fullName = fullName.trim()
+            var arrayFullName = fullName.split(' ')
+            var arrayResult = []
+            for (var i = 0; i< arrayFullName.length; i++) {
+                if (arrayFullName[i] != '') {
+                    var temp = arrayFullName[i][0].toUpperCase() + arrayFullName[i].slice(1)
+                    arrayResult.push(temp)
                 }
             }
-            document.getElementById('fullname').value = tenChuan.join(' ');
-        }
+
+            console.log(arrayResult)
+
+            document.getElementById('fullname').value = arrayResult.join(' ')
+
+
+        }   
     </script>
+    
 </body>
 </html>
