@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - de 3459</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            color: #330066;
+            background: #66FF66;
+        }
+        header {
+            height: 60px;
+            width: 100%;
+            background-color: tomato;
+            text-align: center;
+            line-height: 60px;
+        }
+        section {
+            display: flex;
+        }
+        nav {
+            width: 20%;
+        }
+        .list {
+            width: 100%;
+            list-style: none;
+        }
+        .item {
+            position: relative;
+            border-bottom: 1px solid #fff;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link,
+        .sublink {
+            display: block;
+            text-decoration: none;
+            padding: 20px;
+            background-color: #66FFcc;
+        }
+        .link:hover,
+        .sublink:hover {
+            background-color: #ffcccc;
+        }
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            list-style: none;
+            width: 100%;
+            display: none;
+        }
+        .subitem {
+            border-bottom: 1px solid #fff;
+        }
+
+        .content-list {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .content-item {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            flex-direction: column;
+            margin: 20px;
+            border: 1px solid #000;
+        }
+        .content-img {
+            width: 150px;
+            height: 150px;
+            background-color: #333;
+            margin: 20px;
+        }
+
+        .content-title {
+
+        }
+        .contemt-new-pirce {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <header>Xưởng sản xuất đồ gỗ <strong>HƯỜNG NGÂN</strong></header>
+    <section>
+        <nav>
+            <ul class="list">
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item">
+                    <a href="#" class="link">Nội thất phòng ăn</a>
+                    <ul class="sublist">
+                        <li class="subitem"><a href="#" class="sublink">Tủ bếp gỗ tự nhiên</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Tủ bếp gỗ tự nhiên</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Tủ bếp gỗ tự nhiên</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Tủ bếp gỗ tự nhiên</a></li>
+                    </ul>
+                </li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+                <li class="item"><a href="#" class="link">Nội thất phòng khách</a></li>
+            </ul>
+        </nav>
+        <div class="content-list">
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p class="content-title">Tu noi that sang trong bac nhat ha noi</p>
+                <p>
+                    <span class="contemt-old-pirce">1.000.000d</span>
+                    <span class="contemt-new-pirce">99.000d</span>
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 2 - ma de 3459</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-regester {
+            padding: 30px;
+            margin-top: 30px;
+            width: 600px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-regester">
+        <h1>ĐĂNG KÍ THÔNG TIN</h1>
+        <table>
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td><input type="text" id="user"><span></span></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu</td>
+                <!-- type: password -->
+                <td><input type="text" id="password"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" id="famale" value="famale">
+                    <label for="famale">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Số điện thoại</td>
+                <td><input type="text" id="number"></td>
+            </tr>
+            <tr>
+                <td>Giới thiệu</td>
+                <td>
+                    <textarea name="" id="info" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div align="center" style="margin-top: 30px">
+            <input type="button" value="Đăng kí" onclick="regester()">
+            <input type="button" value="Hủy bỏ" onclick="clear()">
+        </div>
+    </div>
+
+
+    <script>
+        function regester() {
+            var user = document.getElementById('user')
+            var password = document.getElementById('password')
+            var gender = document.querySelector('input[name="gender"]:checked')
+            var number = document.getElementById('number')
+            var info = document.getElementById('info')
+            
+            if (!user.value) {
+                alert('Chua dien ten dang nhap !')
+                user.focus()
+                return;
+            }
+            if (!password.value) {
+                alert('Chua mat khau !')
+                password.focus()
+                return;
+            }
+            if (!gender) {
+                alert('Chua chon gioi tinh !')
+                return;
+            }
+            if (!number.value) {
+                alert('Chua nhap so dien thoai !')
+                number.focus()
+                return;
+            }
+            else if(/[^0-9.-]/.test(number.value)) {
+               alert('so dien thoai khong dung dinh dang !')
+                number.focus()
+                return;
+            }
+            if (!info.value) {
+                alert('Chua nhap thong tin gioi thieu !')
+                info.focus()
+                return;
+            }
+
+            alert('dang ki thang cong')
+        }
+    </script>
+</body>
+</html>
