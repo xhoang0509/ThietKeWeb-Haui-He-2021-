@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 2 - ma de 3475</title>
+    <style>
+        .form {
+            width: 600px;
+            margin: auto;
+            margin-top: 50px;
+            border: 1px solid #000;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <table>
+            <tr>
+                <td>Tiêu đề: </td>
+                <td><input type="text" id="title"></td>
+            </tr>
+            <tr>
+                <td>Người nhận: </td>
+                <td><input type="text" id="recieve"></td>
+            </tr>
+            <tr>
+                <td>File đính kèm: </td>
+                <td><input type="text" id="file"></td>
+            </tr>
+            <tr>
+                <td>Nội dung: </td>
+                <td><textarea name="" id="content" cols="30" rows="10" style="margin: 0px; width: 216px; height: 92px;"></textarea></td>
+            </tr>
+        </table>
+        <div align="center">
+            <button onclick="send()">Gửi đi</button>
+            <button id="clear">Hủy bỏ</button>
+        </div>
+    </div>
+
+    <script>
+        function send() {
+            alert('send function')
+            var title = document.getElementById('title')
+            var receive = document.getElementById('recieve')
+            var file = document.getElementById('file')
+            var content = document.getElementById('content')
+
+
+            if (!title.value) {
+                alert('Yêu cầu nhập tiêu đề');
+                title.focus()
+                return;
+            }
+
+            if (!receive.value) {
+                alert('Yêu cầu nhập người nhận');
+                receive.focus()
+                return;
+            }
+
+            if (!file.value) {
+                alert('Yêu cầu nhập tên file');
+                file.focus()
+                return;
+            } else if (/[^a-zA-Z:/.]/.test(file.value)) {
+                alert('Tên file nhập không đúng định dạng');
+                file.focus()
+                return;
+            }
+            if (!content.value) {
+                alert('Yêu cầu nhập nội dung');
+                content.focus()
+                return;
+            }
+
+            alert('gui di thanh cong')
+        }
+        
+        var clearBtn = document.getElementById('clear')
+        clearBtn.addEventListener('click', function() {
+            document.getElementById('title').value = ''
+            document.getElementById('recieve').value = ''
+            document.getElementById('file').value = ''
+            document.getElementById('content').value = ''
+        })
+
+    </script>
+</body>
+</html>
