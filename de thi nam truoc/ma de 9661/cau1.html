@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - ma de 9661</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: space-between;
+        }
+        .header-logo .img,
+        .header-logo .card {
+            width: 160px;
+            height: 40px;
+            background-color: red;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            margin: 20px;
+        }
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .nav-item {
+            flex: 1;
+        }
+        .nav-link {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            background-color: #999;
+            border: 1px solid #000;
+        }
+        .nav-link:hover {
+            background-color: red;
+            color: #fff;
+        }
+        section {
+            display: flex;
+            margin-top: 10px;
+        }
+        .menu {
+            list-style: none;
+            width: 15%;
+        }
+        .menu-item {
+            flex: 1;
+            position: relative;
+            
+        }
+        .menu-item:hover .menu-sublist {
+            display: block;
+        }
+        .menu-link,
+        .menu-sublink {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            text-align: left;
+            background-color: #ccc;
+            color: #000;
+            border: 1px solid #000;
+        }
+        .menu-link:hover,
+        .menu-sublink:hover {
+            color: #ffff00;
+        }
+        .menu-sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .menu-sublink {
+            background-color: #fff;
+            color: #000;
+        }
+        .content {
+            width: 70%;
+            display: flex;
+            margin: auto;
+        }
+        .content-sidebar {
+            width: 20%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content-sidebar h3 {
+            background-color: yellow;
+            color: #fff;
+        }
+        .sidebar-item {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .sidebar-item-img {
+            width: 80px;
+            height: 100px;
+            background-color: blue;
+        }
+        .sidebar-item-title {
+            font-size: 16px;
+            max-width: 50px;
+            text-align: center;
+        }
+        .product {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product-img {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+        }
+        .product-title:hover {
+            color: red;
+        }
+        .product-price {
+            background-color: red;
+            color: #fff;
+        }
+        .product-old-price {
+            color: #000;
+        }
+        .product-new-price {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="img">GOMHANG.VN</div>
+            <div class="card">Gio Hang</div>
+        </div>
+        <div class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">PHU KIEN</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">SUA CHUA</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">GOP Y</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">LIEN HE</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FALSE SALE</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#" class="menu-link">Galaxy Note</a>
+                <ul class="menu-sublist">
+                    <li class="menu-subitem"><a href="#" class="menu-sublink">Galaxy Note 10+</a></li>
+                    <li class="menu-subitem"><a href="#" class="menu-sublink">Galaxy Note 10+</a></li>
+                    <li class="menu-subitem"><a href="#" class="menu-sublink">Galaxy Note 10+</a></li>
+                    <li class="menu-subitem"><a href="#" class="menu-sublink">Galaxy Note 10+</a></li>
+                    <li class="menu-subitem"><a href="#" class="menu-sublink">Galaxy Note 10+</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy S-sereis</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy A, E, J-series</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy Model 2018</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy Model 2018</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy Model 2018</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Galaxy Model 2018</a></li>
+        </ul>
+
+        <div class="content">
+            <div class="content-sidebar">
+                <h3>GALAXY NOTE</h3>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-item-img"></div>
+                    <p class="sidebar-item-title">Galaxy Note 10</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-item">
+                    <div class="product-img"></div>
+                    <div class="product-title">Tai nghe AKG Y100</div>
+                    <p class="product-old-price">1.000.000d</p>
+                    <p class="product-new-price">99.000d</p>
+                </div>
+                <div class="product-item">
+                    <div class="product-img"></div>
+                    <div class="product-title">Tai nghe AKG Y100</div>
+                    <p class="product-old-price">1.000.000d</p>
+                    <p class="product-new-price">99.000d</p>
+                </div>
+                <div class="product-item">
+                    <div class="product-img"></div>
+                    <div class="product-title">Tai nghe AKG Y100</div>
+                    <p class="product-old-price">1.000.000d</p>
+                    <p class="product-new-price">99.000d</p>
+                </div>
+                <div class="product-item">
+                    <div class="product-img"></div>
+                    <div class="product-title">Tai nghe AKG Y100</div>
+                    <p class="product-old-price">1.000.000d</p>
+                    <p class="product-new-price">99.000d</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
