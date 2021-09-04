@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - ma de 9660</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            width: 100%;
+            height: 60px;
+            background-color: #0099ff;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        header .img {
+            width: 80px;
+            height: 40px;
+            background-color: red;
+            text-align: center;
+            line-height: 40px;
+
+        }
+        .list {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+        .item {
+            position: relative;
+            flex: 1;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link,
+        .sublink {
+            display: block;
+            text-decoration: none;
+            background-color: #0099ff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .link:hover,
+        .sublink:hover {
+            background-color: #ffff33;
+        }
+        .sublist {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .subitem {
+            border-bottom: 1px solid #fff;
+        }
+        .sublink {
+            text-transform: lowercase;
+        }
+        .content h3 {
+            margin-top: 10px;
+            background-color: #0099ff;
+            color: #fff;
+            padding: 10px;
+        }
+        .content-nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .content-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+        .content-item {
+            width: 20%;
+            padding: 10px;
+            margin: 20px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-img {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            margin: 10px;
+        }
+        .content-item p {
+            text-align: center;
+        }
+        .content-item p:hover {
+            color: #009933;
+        }   
+
+        .content-call:hover {
+            color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="img">JOTUN</div>
+        <p>Business Area</p>
+        <div>IMG VIETNAM</div>
+        <div class="search">
+            <input type="text" placeholder="Tim kiem">
+        </div>
+    </header>
+    <nav>
+        <ul class="list">
+            <li class="item"><a href="$" class="link">Son dulux</a></li>
+            <li class="item"><a href="$" class="link">gioi thieu</a></li>
+            <li class="item">
+                <a href="$" class="link">san pham</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Son Dulux</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="$" class="link">son epoxy</a></li>
+            <li class="item"><a href="$" class="link">tin tuc</a></li>
+            <li class="item"><a href="$" class="link">lien he</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h3>CHONG THAM</h3>
+        <div class="content-nav">
+            <div>
+                Sap xep theo
+                <select>
+                    <option value="">Mac dinh</option>
+                    <option value="">Gia Ca</option>
+                    <option value="">Ban Chay Nhat</option>
+                    <option value="">Re Nhat</option>
+                </select>
+            </div>
+
+            <div>
+                Hien thi
+                <select>
+                    <option value="">25</option>
+                    <option value="">30</option>
+                    <option value="">40</option>
+                    <option value="">50</option>
+                </select>
+                Moi trang
+            </div>
+        </div>
+        <div class="content-list">
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+            <div class="content-item">
+                <div class="content-img"></div>
+                <p>son pel son lot chong tham dam bao chat luong 100%</p>
+                <p class="content-call">Vui long goi</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

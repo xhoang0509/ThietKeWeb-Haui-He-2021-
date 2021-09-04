@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - ma de 3475</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-size: 16px;
+            color: #000066;
+            background-color: #00a69b;
+        }
+        header {
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: bisque;
+            text-align: center;
+        }
+        .list {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+        .item {
+            position: relative;
+            flex: 1;
+        }
+        .item:hover .sublist{
+            display: block;
+        }
+        .link,
+        .sublink {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #ffccff;
+        }
+        .link:hover,
+        .sublink:hover {
+            background-color: #66ffff;
+        }
+        .sublist {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .content {
+            margin-top: 20px;
+            display: flex;
+        }
+        .content-left,
+        .content-right {
+            flex: 1;
+        }
+
+        .content-right-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .content-right-item {
+            width: 30%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid #fff;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .content-right-img {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .content-right-item p {
+            text-align: center;
+        }
+        .content-left-container {
+            display: flex;
+        }
+        .content-left-container .img {
+            width: 40%;
+            height: 400px;
+            background-color: brown;
+            margin: 10px;
+        }
+        .post-list {
+            width: 50%;
+        }
+        .post-item {
+            display: flex;
+            margin: 10px;
+            align-items: center;
+        }
+        .post-item-img {
+            width: 50px;
+            height: 50px;
+            background-color: brown;
+            margin-right: 10px;
+        }
+        .post-item p {
+            max-width: 260px;
+        }
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <section>
+        <nav>
+            <ul class="list">
+                <li class="item"><a href="#" class="link">Trang Chu</a></li>
+                <li class="item"><a href="#" class="link">Biet Thu</a></li>
+                <li class="item"><a href="#" class="link">Nha Pho</a></li>
+                <li class="item"><a href="#" class="link">Nha Cap 4</a></li>
+                <li class="item"><a href="#" class="link">Nha Ong</a></li>
+                <li class="item"><a href="#" class="link">Nha Vuon</a></li>
+                <li class="item"><a href="#" class="link">Nha Nong Thon</a></li>
+                <li class="item">
+                    <a href="#" class="link">Noi That</a>
+                    <ul class="sublist">
+                        <li class="subitem"><a href="#" class="sublink">Nha Bep</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Phong Ngu</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Phong Khach</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Nha Tam</a></li>
+                        <li class="subitem"><a href="#" class="sublink">Cau Thang</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="content">
+            <div class="content-left">
+                <h1>MAU BIET THU</h1>
+                <div class="content-left-container">
+                    <div class="img"></div>
+                    <div class="post-list">
+                        <div class="post-item">
+                            <div class="post-item-img"></div>
+                            <p>
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                            </p>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-item-img"></div>
+                            <p>
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                            </p>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-item-img"></div>
+                            <p>
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                            </p>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-item-img"></div>
+                            <p>
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                            </p>
+                        </div>
+                        <div class="post-item">
+                            <div class="post-item-img"></div>
+                            <p>
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                                BTS noi that thiet ke 2 tang 3 tang sang trong
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <h1>MAU NHA BEP</h1>
+                <div class="content-right-list">
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                    <div class="content-right-item">
+                        <div class="content-right-img"></div>
+                        <p>Noi that nha bep bang so sang trong</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
