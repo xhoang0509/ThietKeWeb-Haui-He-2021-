@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ma de 9660 - cau 2</title>
+    <style>
+        input {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <label for="month">Tháng</label>
+    <input type="number" id="month">
+    <br>
+    <br>
+
+    <label for="year">Năm</label>
+    <input type="number" id="year">
+    <br>
+    <br>
+
+    <label>Số ngày</label>
+    <input type="text" id="day" readonly>
+    <br>
+
+    <button onclick="show()">Hiển thị số ngày của tháng</button>
+
+
+    <script>
+        function show() {
+            var month = document.getElementById('month')
+            var year = document.getElementById('year')
+            
+            var day
+            if (!month.value) {
+                alert('Yeu cau nhap thang')
+                month.focus()
+                return;
+            } else if(parseInt(month.value) < 0 || parseInt(month.value) >12) {
+                alert('Thang nhap khong hop le')
+                month.focus()
+                return;
+            }
+            if (!year.value) {
+                alert('Yeu cau nhap nam')
+                year.focus()
+                return;
+            } else if (parseInt(year.value) < 0) {
+                alert('Nam nhap khong hop le')
+                year.focus()
+                return;
+            }
+
+            switch(parseInt(month.value)) {
+                case 1:
+                    day = 30
+                    break
+                case 2:
+                    if(parseInt(year.value) % 4 == 0) {
+                        day = 29
+                    } else {
+                        day = 28
+                    } 
+                    break
+                case 3:
+                    day = 30
+                    break
+                case 4:
+                    day = 31
+                    break
+                case 5:
+                    day = 30
+                    break
+                case 6:
+                    day = 31
+                    break
+                case 7:
+                    day = 30
+                    break
+                case 8:
+                    day = 30
+                    break
+                case 9:
+                    day = 31
+                    break
+                case 10:
+                    day = 30
+                    break
+                case 11:
+                    day = 31
+                    break
+                case 12:
+                    day = 30
+                    break
+            }
+
+            document.getElementById('day').value = day
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 2 - ma de 9661</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Họ và tên: </td>
+            <td><input type="text" id="fullname"></td>
+        </tr>
+        <tr>
+            <td>Họ : </td>
+            <td><input type="text" id="firstname"></td>
+        </tr>
+        <tr>
+            <td><button onclick="show()">Hiển thị</button></td>
+            <td><button>Hủy bỏ</button></td>
+        </tr>
+    </table>
+    <div id="output" style="margin: 30px;"></div>
+
+    <script>
+        function show() {
+            var fullName = document.getElementById('fullname')
+            var firstName = document.getElementById('firstname')
+            
+            document.getElementById('output').innerText = fullName.value
+        }
+    </script>
+</body>
+</html>
