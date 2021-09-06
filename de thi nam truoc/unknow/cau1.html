@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - de thi Thanh Tung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+        }
+        
+        .header-logo {
+            height: 80px;
+            background-image: url(header.jpg);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-logo img {
+            width: 60px;
+            height: 60px;
+            margin-left: 30px;
+        }
+
+        .header-logo h2 {
+            color: #0033cc;
+        }
+
+        .header-nav {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-item {
+            flex: 1;
+        }
+
+        .header-item input {
+            padding: 10px;
+        }
+
+        .header-link {
+            display: block;
+            background-color: #33ccff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .header-link:hover {
+            background-color: yellow;
+        }
+
+        section {
+            margin-top: 30px;
+            display: flex;
+        }
+        
+        .menu {
+            width: 20%;
+            display: inline-block;
+        }
+
+        .menu h2 {
+            background-color: #0066ff;
+            color: #fff;
+        }
+
+        .item {
+            position: relative;
+        }
+
+        .item:hover .sublist {
+            display: block;
+        }
+
+        .link,
+        .sublink {
+            display: block;
+            background-color: #33ffff;
+            color: #fff;
+            border: 1px solid #000;
+            text-decoration: none;
+            padding: 15px;
+        }
+
+        .link:hover,
+        .sublink:hover {
+            color: yellow;
+
+        }
+
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        
+        .content {
+            margin-left: 10px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .content h2 {
+            color: #fff;
+            background-color: #33ccff;
+        }
+
+        .content-list {
+            display: flex;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-item {
+            width: 20%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+        }
+
+        .content-img {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 10px;
+        }
+
+        .content-title:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="c6bcfd177f0e8950d01f.jpg" alt="" class="logo">
+            <h2>BAO THACH MINERAL & PRODUCTION COMPANY LIMITED</h2>
+        </div>
+        <ul class="header-nav">
+            <li class="header-item"><a href="#" class="header-link">TRANG CHU</a></li>
+            <li class="header-item"><a href="#" class="header-link">SAN PHAM</a></li>
+            <li class="header-item"><a href="#" class="header-link">GIOI THIEU</a></li>
+            <li class="header-item"><a href="#" class="header-link">TIN TUC</a></li>
+            <li class="header-item"><a href="#" class="header-link">LINE HE</a></li>
+            <li class="header-item"><input type="text" placeholder="Nhap tu khoa tim kiem"></li>
+        </ul>
+    </header>
+
+    <section>
+        <ul class="menu">
+            <h2>THEO UNG DUNG</h2>
+            <li class="item"><a href="#" class="link">NL Nganh thuc an chan nuoi</a></li>
+            <li class="item"><a href="#" class="link">NL Nganh thuy hai san</a></li>
+            <li class="item"><a href="#" class="link">NL Ngay SX phan bon</a></li>
+            <li class="item"><a href="#" class="link">Nguyen Vat Lieu Xay Dung</a></li>
+            <li class="item">
+                <a href="#" class="link">Cac Nganh Khac</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">NL nganh kinh</a></li>
+                    <li class="subitem"><a href="#" class="sublink">NL nganh luyen kim</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="content">
+            <h2 >SAN PHAM CUNG LOAI</h2>
+            <div class="content-list">
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">
+                        Hat Slicc loai 2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 2 - de thi thanh tung</title>
+</head>
+<body>
+    <div class="form" align="center">
+        <table>
+            <tr>
+                <td>Nhập chuỗi: </td>
+                <td><input type="text" id="string"></td>
+            </tr>
+            <tr>
+                <td>Nhập từ: </td>
+                <td><input type="text" id="word"></td>
+            </tr>
+            <tr>
+                <td>Thông báo: </td>
+                <td><input type="text" id="output" readonly></td>
+            </tr>
+        </table>
+        <div align="center"></div>
+            <button onclick="check()">Kiểm tra</button>
+            <button onclick="cancel()">Hủy bỏ</button>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            var string = document.getElementById('string')
+            var word = document.getElementById('word')
+
+            if (!string.value) {
+                alert("Yeu cau nhap chuoi")
+                string.focus()
+                return
+            }
+
+            if (!word.value) {
+                alert("Yeu cau nhap tu")
+                word.focus()
+                return
+            }
+
+            var stringArray = string.value.trim().split(' ')
+            var wordArray = word.value.trim().split(' ')
+
+
+            if (wordArray.length > 1) {
+                alert('Yeu cau nhap 1 tu')
+                word.value = ''
+                word.focus()
+                return
+            }
+
+            var count = 0
+            stringArray.forEach((string, index) => {
+                if (stringArray[index] == wordArray) {
+                    count++
+                }
+            })
+
+            document.getElementById('output').value = count
+        }
+
+        window.addEventListener("keyup", event => {
+            if (event.keyCode === 13) {
+                check()
+            }
+        })
+    </script>
+</body>
+</html>
