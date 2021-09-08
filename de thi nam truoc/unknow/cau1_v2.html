@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - de thi Thanh Tung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+
+        }
+
+        .header-logo {
+            background-image: url(./header.jpg);
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo .img {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            margin-left: 20px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .header-slogan {
+            margin-right: 20px;
+        }
+        .header-slogan h3{
+            color: #0033cc;
+        }
+        .header-list {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            align-items: center;
+            background-color: #33ccff;
+        }
+        .header-item {
+            flex: 1;
+        }
+        .header-link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #33ccff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header-link:hover {
+            color: yellow;
+        }
+        section {
+            margin-top: 30px;
+            display: flex;
+        }
+        .menu {
+            width: 20%;
+            list-style: none;
+            
+        }
+        .menu h3 {
+            background-color: #0066ff;
+            color: #fff;
+        }
+        .item {
+            position: relative;
+
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link,
+        .sublink {
+            display: block;
+            text-decoration: none;
+            background-color: #33ffff;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 10px;
+        }
+        .link:hover,
+        .sublink:hover {
+            color: yellow;
+
+        }
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+
+        .content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        .content h3 {
+            background-color: #33ccff;
+            color: #fff;
+            padding: 10px;
+            width: 30%;
+            position: relative;
+        }
+        .content h3::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 1000px;
+            height: 2px;
+            background-color: #33ccff;
+        }
+        .content h3::after {
+            content: "";
+            position: absolute;
+            left: calc(90% - 13px);
+            bottom: 0;
+            border: 45px solid red;
+            border-color: transparent transparent #33ccff transparent;
+        }
+        .content-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content-item {
+            width: 20%;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+        }
+        .content-img {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            margin: 10px;
+        }
+        .content-img:hover {
+            transform: scale(1.05);
+        }
+        .content-title:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <div class="img">LOGO</div>
+            <div class="header-slogan">
+                <h3>BAO THANH MINERAL & PRODUCTION COMPANY LIMITED</h3>
+                <p>Addres: But Phong Billage, Lien Son Communte, Kim Bang district, Ha Nam Province</p>
+            </div>
+        </div>
+        <ul class="header-list">
+            <li class="header-item"><a href="#" class="header-link">TRANG CHU</a></li>
+            <li class="header-item"><a href="#" class="header-link">SAN PHAM</a></li>
+            <li class="header-item"><a href="#" class="header-link">GIOI THIEU</a></li>
+            <li class="header-item"><a href="#" class="header-link">TIN TUC</a></li>
+            <li class="header-item"><a href="#" class="header-link">LIEN HE</a></li>
+            <li class="header-item"><input type="text" placeholder="Nhap tu khoa tim kiem"></li>
+        </ul>
+    </header>
+
+    <section>
+        <ul class="menu">
+            <h3>THEO UNG DUNG</h3>
+            <li class="item"><a href="#" class="link">NL Nganh Thuc an chan noi</a></li>
+            <li class="item"><a href="#" class="link">NL Nganh Thuc an chan noi</a></li>
+            <li class="item"><a href="#" class="link">NL Nganh Thuc an chan noi</a></li>
+            <li class="item"><a href="#" class="link">NL Nganh Thuc an chan noi</a></li>
+            <li class="item">
+                <a href="#" class="link">Cac nganh khac</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">NL Nganh Kinh</a></li>
+                    <li class="subitem"><a href="#" class="sublink">NL Nganh Kinh</a></li>
+                    <li class="subitem"><a href="#" class="sublink">NL Nganh Kinh</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="content">
+            <h3>SAN PHAM CUNG LOAI</h3>
+            <div class="content-list">
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+                <div class="content-item">
+                    <div class="content-img"></div>
+                    <p class="content-title">Hat silic loai 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
