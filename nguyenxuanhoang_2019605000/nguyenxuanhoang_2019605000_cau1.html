@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+        .header-logo input {
+            padding: 10px;
+        }
+        .header-logo img {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .header-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header-item {
+            flex: 1;
+        }
+        .header-link {
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            color: #000;
+            background-color: yellow;
+            text-align: center;
+        }
+        .header-link:hover {
+            color: red;
+        }
+        section {
+            display: flex;
+            margin-top: 30px;
+        }
+        .menu {
+            width: 20%;
+            list-style: none;
+        }
+        .menu h3 {
+            color: #fff;
+            background-color: #336699;
+            padding: 10px;
+        }
+        .item {
+            position: relative;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link, .sublink {
+            display: block;
+            text-decoration: none;
+            background-color: #ccc;
+            border: 1px dotted #000;
+            padding: 5px;
+        }
+        .link:hover {
+            color: #ffff33;
+        }
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .sublink {
+            background-color: #fff;
+            color: #000;
+        }
+        .content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;        
+        }
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            background-color: gray;
+            align-items: center;
+        }
+        .content-header h3 {
+            background-color: gray;
+            color: #000;
+            padding: 10px;
+        }
+        .content-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content-item {
+            width: 20%;
+            margin: 20px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .content-title {
+            text-align: center;
+        }
+        .content-title:hover {
+            color: red;
+        }
+        .content-img {
+            padding: 10px;
+        }
+        .old-price {
+            color: #000;
+        }
+        .new-price {
+            color: red;
+        }
+        .present {
+            width: 20px;
+            height: 20px;
+            background-color: #00cc33;
+            color: #fff;
+        }
+        .present:hover {
+            background-color: #0099ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="header.PNG" alt="">
+            <input type="text" placeholder="Ban can tim ...">
+        </div>
+        <ul class="header-list">
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>DIEN THOAI</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>TABLET</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>LAPTOP</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>PHU KIEN</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>DONG HO</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>CU GIa RE</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>CONG NGHE</p>
+            </a></li>
+            <li class="header-item"><a href="#" class="header-link">
+                <img src="icon.PNG" alt="">
+                <p>HOI DAP</p>
+            </a></li>
+        </ul>
+    </header>
+    <section>
+        <ul class="menu">
+            <h3>DANH MUC SAN PHAM</h3>
+            <li class="item"><a href="#" class="link">Khuyen mai</a></li>
+            <li class="item"><a href="#" class="link">Dien thoai</a></li>
+            <li class="item">
+                <a href="#" class="link">May tinh bang</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">MacBook 12inch</a></li>
+                    <li class="subitem"><a href="#" class="sublink">MacBook 12inch</a></li>
+                    <li class="subitem"><a href="#" class="sublink">MacBook 12inch</a></li>
+                    <li class="subitem"><a href="#" class="sublink">MacBook 12inch</a></li>
+                    <li class="subitem"><a href="#" class="sublink">MacBook 12inch</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#" class="link">May Tinh Apple</a></li>
+            <li class="item"><a href="#" class="link">May Laptop Cu</a></li>
+            <li class="item"><a href="#" class="link">Loa Chinh Hang JBL</a></li>
+            <li class="item"><a href="#" class="link">May Doc Sach</a></li>
+            <li class="item"><a href="#" class="link">iPAd</a></li>
+        </ul>
+        <div class="content">
+            <div class="content-header">
+                <h3>MAY LAPTOP CU</h3>
+                <div>
+                    Sap xep theo
+                    <select>
+                        <option value="">Moi nhat truoc</option>
+                        <option value="">Gia tang dan</option>
+                        <option value="">Gia giam dan</option>
+                    </select>
+                </div>
+            </div>
+            <div class="content-list">
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+                <div class="content-item">
+                    <img src="product.PNG" alt="" class="content-img">
+                    <p class="content-title">The New Macbook 12inch Gray- 2015inch</p>
+                    <p class="old-price"><del>20.000.00</del></p>
+                    <p class="new-price">17.500.000d <span class="present">20%</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

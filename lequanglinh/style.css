@@ -1,0 +1,115 @@
+* {
+    box-sizing: border;
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tieng-viet {
+    margin-top: 24px;
+    color: #01a54f;
+    font-size: 20px;
+    font-weight: bold;
+}
+.cong-ty {
+    text-align: center;
+}
+.tieng-anh {
+    color: #99ba13;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.ben-phai {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.benphai input {
+    font-size: 20px;
+}
+.viet-nam {
+    width: 100px;
+}
+/* MAIN */
+.main {
+    margin-top: 20px;
+}
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+.menu li {
+    flex: 1;
+    text-align: center;
+}
+.menu-link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: #fbfef5;
+    display: block;
+}
+.menu-link:hover {
+    background-color: #00a551;
+}
+.hinh-anh {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.hinh-anh img {
+    width: 1366px;
+    height: 300px;
+}
+.noi-dung {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.cot {
+    width: 33%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cot h1 {
+    font-weight: lighter;
+    margin-right: 170px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.cot img {
+    width: 400px;
+    height: 200px;
+}
+.cot p {
+    padding: 30px;
+}
+.xem-them {
+    color: #01a54f;
+    padding: 10px 20px;
+    border: 1px solid red;
+    text-decoration: none;
+    margin-left: 260px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+footer {
+    background-color: #00a551;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}

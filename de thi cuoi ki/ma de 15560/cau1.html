@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1 - ma de 15560</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #336699;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 60px;
+        }
+        .search {
+            display: flex;
+        }
+        .search div {
+            width: 80px;
+            height: 40px;
+            background-color: #999;
+            line-height: 40px;
+            text-align: center;
+        }
+        header input {
+            height: 40px;
+            width: 400px;
+        }
+        .icon {
+            height: 40px;
+            width: 80px;
+            background-color: #999;
+            text-align: center;
+            line-height: 40px;
+        }
+        section {
+            display: flex;
+            margin-top: 30px;
+        }
+        .menu {
+            width: 20%;
+            list-style: none;
+        }
+        .menu h3 {
+            background-color: #336699;
+            color: #fff;
+        }
+        .item {
+            position: relative;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link, .sublink {
+            display: block;
+            text-decoration: none;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        .link:hover {
+            color: #336699;
+        }
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;   
+            display: none;
+        }
+        .sublink {
+            color: #000;
+            background-color: #fff;
+        }
+        .content {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        .content-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border: 1px solid #000;
+        }
+        .content-img {
+            width: 400px;
+            height: 200px;
+        }
+        .content-title:hover {
+            color: red;
+        }
+        .new-price {
+            color: red;
+        }
+        .present {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.PNG" alt="" class="logo">
+        <div class="search">
+            <input type="text" placeholder="Search For Product">
+            <div>Search</div>
+        </div>
+        <div class="icon">Icon 1</div>
+        <div class="icon">Icon 2</div>
+    </header>
+    <section>
+        <ul class="menu">
+            <h3>ALL CATEGORY</h3>
+            <li class="item"><a href="#" class="link">Home</a></li>
+            <li class="item"><a href="#" class="link">Blog</a></li>
+            <li class="item">
+                <a href="#" class="link">Laptops</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">Dell (0)</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Men (0)</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Purse (0)</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#" class="link">Shocks</a></li>
+            <li class="item"><a href="#" class="link">Coloth</a></li>
+            <li class="item"><a href="#" class="link">Cosmetic</a></li>
+            <li class="item"><a href="#" class="link">Desktops</a></li>
+            <li class="item"><a href="#" class="link">Kids</a></li>
+            <li class="item"><a href="#" class="link">MP3 Players</a></li>
+            <li class="item"><a href="#" class="link">Perfume</a></li>
+            <li class="item"><a href="#" class="link">MORE</a></li>
+        </ul>
+        <div class="content">
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+            <div class="content-item">
+                <img src="product.PNG" alt="" class="content-img">
+                <p class="content-title">Vong deo thay Galaxy FIt-e hang chinh hang</p>
+                <div class="price">
+                    <p class="new-price">590.000d <span class="present">40%</span></p>
+                    <p class="old-price"><del>600.000d</del></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

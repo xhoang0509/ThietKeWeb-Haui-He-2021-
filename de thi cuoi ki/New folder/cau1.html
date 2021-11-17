@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cau 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-logo > img {
+            width: 120px;
+            height: 60px;
+        }
+        .header-list {
+            list-style: none;
+            display: flex;
+            background-color: #ff3399;
+            align-items: center;
+        }
+        .header-item {
+            flex: 1;
+        }
+        .header-item input {
+            padding: 5px;
+        }
+        .header-link {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .header-link:hover {
+            color: #ffccff;
+        }
+        section {
+            display: flex;
+            margin-top: 30px;
+        }
+        .menu {
+            width: 20%;
+        }
+        .menu h3 {
+            background-color: #ffcc33;
+            color: #000;
+        }
+        .item {
+            position: relative;
+        }
+        .item:hover .sublist {
+            display: block;
+        }
+        .link, .sublink {
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid #999999;
+        }
+        .sublist {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            list-style: none;
+            display: none;
+        }
+        .sublink {
+            background-color: #fff;
+            color: #000;
+        }
+        .content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+        .content-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content-item {
+            width: 40%;
+            margin: 20px;
+            border: 1px solid #000;
+            display: flex;
+        }
+        .content-img {
+            width: 150px;
+            height: 150px;
+        }   
+        .new-price {
+            color: #ff33cc;
+        }    
+        .old-price {
+            color: #999;
+        } 
+        .add-cart {
+            background-color: gray;
+            width: 60px;
+            height: 30px;;
+        }
+        .add-cart:hover {
+            background-color: #ff33cc;
+            color: #fff;
+        }
+        .content-footer {
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .footer-item {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+        }
+        .footer-item:nth-child(1) {
+            background-color: #33cc66;
+        }
+        .footer-item:nth-child(2) {
+            background-color: #ff6666;
+        }
+        .footer-item:nth-child(3) {
+            background-color: #ff66ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="logo.PNG" alt="">
+            <div>
+                <img src="cart.PNG" alt="">
+                Cart
+            </div>
+        </div>
+        <ul class="header-list">
+            <li class="header-item"><a href="#" class="header-link">Home</a></li>
+            <li class="header-item"><a href="#" class="header-link">Branda</a></li>
+            <li class="header-item"><a href="#" class="header-link">Gift Cetticates</a><li>
+            <li class="header-item"><a href="#" class="header-link">More</a></li>
+            <li class="header-item"><input type="text" placeholder="Search"></li>
+        </ul>
+    </header>
+    <section>
+        <ul class="menu">
+            <h3>CATEGORIES</h3>
+            <li class="item"><a href="#" class="link">Roses</a></li>
+            <li class="item">
+                <a href="#" class="link">Flower Basket</a>
+                <ul class="sublist">
+                    <li class="subitem"><a href="#" class="sublink">MacOS</a></li>
+                    <li class="subitem"><a href="#" class="sublink">Window</a></li>
+                </ul>
+            </li>
+            <li class="item"><a href="#" class="link">Gerberas</a></li>
+            <li class="item"><a href="#" class="link">Orchids</a></li>
+        </ul>
+        <div class="content">
+            <h3>SPECIALS</h3>
+            <div class="content-list">
+                <div class="content-item">
+                    <img src="content-img.PNG" alt="" class="content-img">
+                    <div>
+                        <p class="content-title">Aliquam Querat Volupatetem</p>
+                        <p>
+                            <span class="new-price">$100.00</span>
+                            <span class="old-price"><del>$122.00</del></span>
+                        </p>
+                        <p><span class="add-cart">Add To Cart</span></p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <img src="content-img.PNG" alt="" class="content-img">
+                    <div>
+                        <p class="content-title">Aliquam Querat Volupatetem</p>
+                        <p>
+                            <span class="new-price">$100.00</span>
+                            <span class="old-price"><del>$122.00</del></span>
+                        </p>
+                        <p><span class="add-cart">Add To Cart</span></p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <img src="content-img.PNG" alt="" class="content-img">
+                    <div>
+                        <p class="content-title">Aliquam Querat Volupatetem</p>
+                        <p>
+                            <span class="new-price">$100.00</span>
+                            <span class="old-price"><del>$122.00</del></span>
+                        </p>
+                        <p><span class="add-cart">Add To Cart</span></p>
+                    </div>
+                </div>
+                <div class="content-item">
+                    <img src="content-img.PNG" alt="" class="content-img">
+                    <div>
+                        <p class="content-title">Aliquam Querat Volupatetem</p>
+                        <p>
+                            <span class="new-price">$100.00</span>
+                            <span class="old-price"><del>$122.00</del></span>
+                        </p>
+                        <p><span class="add-cart">Add To Cart</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-footer">
+                <div class="footer-item">
+                    <p>Seasonal strock</p>
+                    <p>occ item</p>
+                </div>
+                <div class="footer-item">
+                    <p>Fresh Always</p>
+                    <p>dfsfs</p>
+                </div>
+                <div class="footer-item">
+                    <p>Uique Boutquet</p>
+                    <p>fsdfsdfsd</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
